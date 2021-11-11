@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+// Elya Kofler
+// Chananel Zaguri
+
 namespace AstronomyWPF
 {
     /// <summary>

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a4e1de88-e752-4192-8ae0-0cdde9197ee7": {
+      "ProjectGuid": "a4e1de88-e752-4192-8ae0-0cdde9197ee7",
+      "DisplayName": "AstronomyDAL",
+      "ColorIndex": 0
+    },
+    "e06669a1-e21e-4c44-87a7-7ca4ac919f7e": {
+      "ProjectGuid": "e06669a1-e21e-4c44-87a7-7ca4ac919f7e",
+      "DisplayName": "AstronomyWPF",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
