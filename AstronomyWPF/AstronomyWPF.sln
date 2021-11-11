@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstronomyWPF", "AstronomyWP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstronomyDAL", "..\AstronomyDAL\AstronomyDAL.csproj", "{A4E1DE88-E752-4192-8AE0-0CDDE9197EE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstronomyBL", "..\AstronomyBL\AstronomyBL.csproj", "{3703B5BB-671A-4BA8-AC04-13F0BAC708DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstronomyDP", "..\AstronomyDP\AstronomyDP.csproj", "{6AA6BCBF-379C-402A-8343-C460E3ADA735}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A4E1DE88-E752-4192-8AE0-0CDDE9197EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4E1DE88-E752-4192-8AE0-0CDDE9197EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4E1DE88-E752-4192-8AE0-0CDDE9197EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3703B5BB-671A-4BA8-AC04-13F0BAC708DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3703B5BB-671A-4BA8-AC04-13F0BAC708DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3703B5BB-671A-4BA8-AC04-13F0BAC708DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3703B5BB-671A-4BA8-AC04-13F0BAC708DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA6BCBF-379C-402A-8343-C460E3ADA735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA6BCBF-379C-402A-8343-C460E3ADA735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA6BCBF-379C-402A-8343-C460E3ADA735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA6BCBF-379C-402A-8343-C460E3ADA735}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
