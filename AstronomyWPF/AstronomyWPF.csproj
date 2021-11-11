@@ -94,5 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AstronomyBL\AstronomyBL.csproj">
+      <Project>{3703b5bb-671a-4ba8-ac04-13f0bac708db}</Project>
+      <Name>AstronomyBL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AstronomyDP\AstronomyDP.csproj">
+      <Project>{6aa6bcbf-379c-402a-8343-c460e3ada735}</Project>
+      <Name>AstronomyDP</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
