@@ -10,7 +10,22 @@
       "ProjectGuid": "e06669a1-e21e-4c44-87a7-7ca4ac919f7e",
       "DisplayName": "AstronomyWPF",
       "ColorIndex": 1
+    },
+    "6aa6bcbf-379c-402a-8343-c460e3ada735": {
+      "ProjectGuid": "6aa6bcbf-379c-402a-8343-c460e3ada735",
+      "DisplayName": "AstronomyDP",
+      "ColorIndex": 2
+    },
+    "3703b5bb-671a-4ba8-ac04-13f0bac708db": {
+      "ProjectGuid": "3703b5bb-671a-4ba8-ac04-13f0bac708db",
+      "DisplayName": "AstronomyBL",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }
