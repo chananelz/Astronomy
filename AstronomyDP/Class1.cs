@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 // Elya Kofler 212853139
-// Chananel Zaguri
+// Chananel Zaguri 206275711
 
 namespace AstronomyDP
 {

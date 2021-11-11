@@ -13,8 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-// Elya Kofler
-// Chananel Zaguri
+// Elya Kofler 212853139
+// Chananel Zaguri 206275711
 
 namespace AstronomyWPF
 {
