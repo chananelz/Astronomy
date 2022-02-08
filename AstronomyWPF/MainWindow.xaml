@@ -3,11 +3,44 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AstronomyWPF"
+        xmlns:local="clr-namespace:AstronomyWPF" 
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:DetailsToStarConverter x:Key="StarCreator" />
+    </Window.Resources>
     <Grid>
-        <Button Content="212853139" HorizontalAlignment="Left" Margin="406,224,0,0" VerticalAlignment="Top" Height="35" Width="101"/>
+
+        <TextBox Text="{Binding Famely}" HorizontalAlignment="Left" Height="29" Margin="4,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+
+        <ListBox ItemsSource="{Binding Stars}" HorizontalAlignment="Left" Height="267" Margin="186,20,0,0" VerticalAlignment="Top" Width="586" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Text="{Binding Name}"></TextBox>
+                        <Image Source="{Binding ImageUri}" Stretch="None"  >
+                        </Image>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Border 
+            BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="99" Margin="105,305,0,0" VerticalAlignment="Top" Width="680">
+            <StackPanel >
+                <Button Command="{Binding AddStar}" Content="add star" HorizontalAlignment="Center" >
+                    <Button.CommandParameter>
+                        <MultiBinding Converter="{StaticResource StarCreator}">
+                            <Binding ElementName="the_name" Path="Text"/>
+                            <Binding ElementName="the_uri" Path="Text"/>
+                        </MultiBinding>
+                    </Button.CommandParameter>   
+                </Button>
+                <TextBox x:Name="the_name" TextWrapping="Wrap" Text="enter name" />
+                <TextBox  x:Name="the_uri" TextWrapping="Wrap" Text="enter uri" />
+            </StackPanel>
+        </Border>
+
 
 
     </Grid>

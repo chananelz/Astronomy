@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="converter\DetailsToStarConverter.cs" />
+    <Compile Include="Models\StarModel.cs" />
+    <Compile Include="ViewModels\Commands\AddCommand.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,6 +66,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\StarVeiwModels.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -103,6 +107,20 @@
       <Project>{6aa6bcbf-379c-402a-8343-c460e3ada735}</Project>
       <Name>AstronomyDP</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\B.png" />
+    <Resource Include="Images\C.png" />
+    <Resource Include="Images\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\F.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\A.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

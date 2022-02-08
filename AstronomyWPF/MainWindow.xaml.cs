@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AstronomyDP;
+using AstronomyWPF.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,9 +25,13 @@ namespace AstronomyWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public StarVeiwModels CurrentVM { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            CurrentVM = new StarVeiwModels();
+            this.DataContext = CurrentVM;
         }
+
     }
 }
