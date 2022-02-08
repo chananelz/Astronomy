@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Window0" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
     <Grid>
-        
+        <Rectangle RadiusX="30.8" RadiusY="30.8" Fill="White"/>
+        <Label Content="Welcome!" FontFamily="Harlow Solid Italic" FontSize="24"/>
+
+
     </Grid>
 </Window>
