@@ -18,7 +18,7 @@
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <TextBox Text="{Binding Name}"></TextBox>
-                        <Image Source="{Binding ImageUri}" Stretch="None"  >
+                        <Image Source="{Binding ObjectUri}" Stretch="None"  >
                         </Image>
                     </StackPanel>
                 </DataTemplate>

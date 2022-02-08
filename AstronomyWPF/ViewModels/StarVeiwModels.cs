@@ -56,7 +56,7 @@ namespace AstronomyWPF.ViewModels
 
         private void AddStar_Add(Star NewStar)
         {
-            //Stars.Add(new Star { Name = "weather", ImageUri = @"https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" });
+            //Stars.Add(new Star { Name = "weather", ObjectUri = @"https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" });
             //MessageBox.Show(CurrentModel.Stars.Count.ToString());
             Stars.Add(NewStar);
         }

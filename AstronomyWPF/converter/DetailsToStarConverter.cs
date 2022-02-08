@@ -17,7 +17,7 @@ namespace AstronomyWPF
             if ((values != null) && (values.Length > 1))
             {
                 Result.Name = values[0].ToString();
-                Result.ImageUri = values[1].ToString();
+                Result.ObjectUri = values[1].ToString();
             }
             
 

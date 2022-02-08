@@ -16,11 +16,11 @@ namespace AstronomyWPF.Models
         {
             Stars = new List<Star>
             {
-                new Star { Name = "ERETH", ImageUri = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg" },
-                new Star { Name = "erth2", ImageUri = @"C:\AstronomyProject\AstronomyWPF\Images\F.jpg" },
-                new Star { Name = "san", ImageUri = @"C:\AstronomyProject\AstronomyWPF\Images\B.png" },
-                new Star { Name = "Moon", ImageUri = @"C:\AstronomyProject\AstronomyWPF\Images\C.png" },
-                new Star { Name = "NOGA", ImageUri = @"C:\AstronomyProject\AstronomyWPF\Images\D.png" }
+                new Star { Name = "ERETH", ObjectUri = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg" },
+                new Star { Name = "erth2", ObjectUri = @"C:\AstronomyProject\AstronomyWPF\Images\F.jpg" },
+                new Star { Name = "san", ObjectUri = @"C:\AstronomyProject\AstronomyWPF\Images\B.png" },
+                new Star { Name = "Moon", ObjectUri = @"C:\AstronomyProject\AstronomyWPF\Images\C.png" },
+                new Star { Name = "NOGA", ObjectUri = @"C:\AstronomyProject\AstronomyWPF\Images\D.png" }
             };
 
             Famely = "Kofler";
