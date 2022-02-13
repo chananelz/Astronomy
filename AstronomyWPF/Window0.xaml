@@ -5,10 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AstronomyWPF"
         mc:Ignorable="d"
-        Title="Window0" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+        xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Window0" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
     <Grid>
         <Rectangle RadiusX="30.8" RadiusY="30.8" Fill="White"/>
-        <Label Content="Welcome!" FontFamily="Harlow Solid Italic" FontSize="24"/>
+        <Image Source="Assets\image1\Russia-Space-Advertisement2.jpg"  Margin="310,0,0,0" Stretch="UniformToFill"/>
+        <Rectangle Margin="310,0,0,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop  Offset="0.8" Color="#CCB81717" />
+                    <GradientStop  Offset="0.3" Color="#E5FFFFFF"/>
+                    <GradientStop Offset="0.6" Color="#990325FD"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <StackPanel Margin="20,50,450,0">
+            <Label Content="Welcome! Please login:" FontFamily="Harlow Solid Italic" FontSize="24" Margin="5,5" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"  Foreground="{DynamicResource ValidationErrorBrush}"  > <Run Text="The system is for space scientists only"/></TextBlock>
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"  > <Run Text="Don't have an account?  "/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#FF2468AC"> <Run Text="Create an account"/></TextBlock>
+            </StackPanel>
+            <StackPanel Margin="0,15" Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox materialDesign:HintAssist.Hint="Username" Width="200" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Foreground="#707070"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Password" Width="200" Margin="5"/>
+            </StackPanel>
+            <Grid>
+                <CheckBox Content="Remember me" Margin="5,10" Foreground="#707070"/>
+                <Label Content="I forgot my password" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="130,0,0,0" Foreground="#707070"/>
+            </Grid>
+            <Button HorizontalAlignment="Center"  Margin="0,10,40,0" Content="LOGIN" FontFamily="Impact" FontSize="18" Width="100" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" BorderBrush="#FF307CD6"/>
+            <StackPanel Orientation="Horizontal" Margin="10,35">
+                <Label Content="Sign in with" Foreground="#707070" VerticalAlignment="Center"/>
+                <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}">
+                    <materialDesign:PackIcon Kind="Facebook" VerticalAlignment="Center" Foreground="White"/>
+                </Button>
+                <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Margin="15,0" Background="#FF01BAFF" BorderBrush="#FF01BAFF">
+                    <materialDesign:PackIcon Kind="Twitter" VerticalAlignment="Center" Foreground="White"/>
+                </Button>
+                <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#FFE05959" BorderBrush="#FFE05959">
+                    <materialDesign:PackIcon Kind="Google" VerticalAlignment="Center" Foreground="White"/>
+                </Button>
+            </StackPanel>
+
+
+        </StackPanel>
 
 
     </Grid>
