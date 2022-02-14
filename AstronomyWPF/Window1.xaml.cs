@@ -24,7 +24,7 @@ namespace AstronomyWPF
             InitializeComponent();
             //Application.Current.Shutdown();
 
-            frame.Navigate(new Uri("Welcome.xaml", UriKind.RelativeOrAbsolute));
+            frame.Navigate(new Uri(@"page1.0-1.5\Welcome.xaml", UriKind.RelativeOrAbsolute));
         }
 
 
@@ -45,19 +45,19 @@ namespace AstronomyWPF
             switch (ListViewMenu.SelectedIndex)
             {
                 case 0:
-                    frame.Navigate(new Uri("Explanation0.xaml", UriKind.RelativeOrAbsolute));
+                    frame.Navigate(new Uri(@"page1.0-1.5\Explanation0.xaml", UriKind.RelativeOrAbsolute));
                     break;
                 case 1:
-                    frame.Navigate(new Uri("Picture_of_the_Day.xaml", UriKind.RelativeOrAbsolute));
+                    frame.Navigate(new Uri(@"page1.0-1.5\Picture_of_the_Day.xaml", UriKind.RelativeOrAbsolute));
                     break;
                 case 2:
-                    frame.Navigate(new Uri("Planet_Profiles.xaml", UriKind.RelativeOrAbsolute));
+                    frame.Navigate(new Uri(@"page1.0-1.5\Planet_Profiles.xaml", UriKind.RelativeOrAbsolute));
                     break;
                 case 3:
-                    frame.Navigate(new Uri("media_search.xaml", UriKind.RelativeOrAbsolute));
+                    frame.Navigate(new Uri(@"page1.0-1.5\media_search.xaml", UriKind.RelativeOrAbsolute));
                     break;
                 case 4:
-                    frame.Navigate(new Uri("Asteroids_near_Earth.xaml", UriKind.RelativeOrAbsolute));
+                    frame.Navigate(new Uri(@"page1.0-1.5\Asteroids_near_Earth.xaml", UriKind.RelativeOrAbsolute));
                     break;
 
             }
