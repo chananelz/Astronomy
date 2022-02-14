@@ -23,6 +23,8 @@ namespace AstronomyWPF
         {
             InitializeComponent();
             //Application.Current.Shutdown();
+
+            frame.Navigate(new Uri("Welcome.xaml", UriKind.RelativeOrAbsolute));
         }
 
 
@@ -38,6 +40,29 @@ namespace AstronomyWPF
             ButtonOpenMenu.Visibility = Visibility.Visible;
         }
 
-       
+        private void SideMenuControl_SelectionChanged(object sender, EventArgs e)
+        {
+            switch (ListViewMenu.SelectedIndex)
+            {
+                case 0:
+                    frame.Navigate(new Uri("Explanation0.xaml", UriKind.RelativeOrAbsolute));
+                    break;
+                case 1:
+                    frame.Navigate(new Uri("Picture_of_the_Day.xaml", UriKind.RelativeOrAbsolute));
+                    break;
+                case 2:
+                    frame.Navigate(new Uri("Planet_Profiles.xaml", UriKind.RelativeOrAbsolute));
+                    break;
+                case 3:
+                    frame.Navigate(new Uri("media_search.xaml", UriKind.RelativeOrAbsolute));
+                    break;
+                case 4:
+                    frame.Navigate(new Uri("Asteroids_near_Earth.xaml", UriKind.RelativeOrAbsolute));
+                    break;
+
+            }
+        }
     }
+
 }
+

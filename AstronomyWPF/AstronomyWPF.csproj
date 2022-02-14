@@ -63,15 +63,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Asteroids_near_Earth.xaml.cs">
+      <DependentUpon>Asteroids_near_Earth.xaml</DependentUpon>
+    </Compile>
     <Compile Include="converter\DetailsToStarConverter.cs" />
     <Compile Include="Explanation0.xaml.cs">
       <DependentUpon>Explanation0.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="media_search.xaml.cs">
+      <DependentUpon>media_search.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\StarModel.cs" />
     <Compile Include="Picture_of_the_Day.xaml.cs">
       <DependentUpon>Picture_of_the_Day.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Planet_Profiles.xaml.cs">
+      <DependentUpon>Planet_Profiles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\Commands\AddCommand.cs" />
+    <Compile Include="Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window0.xaml.cs">
       <DependentUpon>Window0.xaml</DependentUpon>
     </Compile>
@@ -81,6 +93,10 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
+    <Page Include="Asteroids_near_Earth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Explanation0.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,7 +114,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="media_search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Picture_of_the_Day.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Planet_Profiles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Welcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

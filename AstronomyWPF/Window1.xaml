@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:AstronomyWPF"
         mc:Ignorable="d"
         Title="" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="Wheat" >
-    
+
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -33,6 +33,7 @@
     </Window.Triggers>
 
     <Grid Background= "{DynamicResource MaterialDesignFlatButtonClick}">
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="200,60,0,0"/>
         <Grid Height="60" VerticalAlignment="Top"  Background="{DynamicResource my_blue}">
             <TextBlock Text="Latest Space and Astronomy News" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontFamily="Castellar" Foreground="{DynamicResource MaterialDesignBackground}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
@@ -58,7 +59,7 @@
                         <materialDesign:PackIcon Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>
                 </Grid>
-                <ListView x:Name="ListViewMenu" Foreground="{DynamicResource PrimaryHueLightBrush}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                <ListView x:Name="ListViewMenu" Foreground="{DynamicResource PrimaryHueLightBrush}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedIndex="0" SelectionChanged="SideMenuControl_SelectionChanged" >
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="FileDocument" Height="25" Width="25" Margin="10"/>
