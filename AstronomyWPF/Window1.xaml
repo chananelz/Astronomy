@@ -3,10 +3,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:AstronomyWPF"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="Wheat" >
     <Grid>
-        
+        <Grid Height="60" VerticalAlignment="Top"  Background="{DynamicResource my_blue}">
+            <TextBlock Text="Latest Space and Astronomy News" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontFamily="Castellar" Foreground="{DynamicResource MaterialDesignBackground}"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Text="Kofler &amp; Zaguri" VerticalAlignment="Center" FontSize="16"/>
+                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
+                    <StackPanel Width="150">
+                        <Button Content="Settings"/>
+                        <Button Content="Account"/>
+                        <Button Content="Help"/>
+                        <Separator/>
+                        <Button Content="Logout"/>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </StackPanel>
+        </Grid>
+        <Grid Width="200" HorizontalAlignment="Left" Background="{DynamicResource my_deep_blue}">
+            
+        </Grid>
     </Grid>
 </Window>
