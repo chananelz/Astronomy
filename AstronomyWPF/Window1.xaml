@@ -7,7 +7,32 @@
         xmlns:local="clr-namespace:AstronomyWPF"
         mc:Ignorable="d"
         Title="" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="Wheat" >
-    <Grid>
+    
+    <Window.Resources>
+        <Storyboard x:Key="OpenMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="200"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
+            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseMenu">
+            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid Background= "{DynamicResource MaterialDesignFlatButtonClick}">
         <Grid Height="60" VerticalAlignment="Top"  Background="{DynamicResource my_blue}">
             <TextBlock Text="Latest Space and Astronomy News" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontFamily="Castellar" Foreground="{DynamicResource MaterialDesignBackground}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
@@ -23,8 +48,49 @@
                 </materialDesign:PopupBox>
             </StackPanel>
         </Grid>
-        <Grid Width="200" HorizontalAlignment="Left" Background="{DynamicResource my_deep_blue}">
-            
+        <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" Background="{DynamicResource my_deep_blue}">
+            <StackPanel>
+                <Grid Height="150" Background="{DynamicResource MaterialDesignLightBackground}">
+                    <Button x:Name="ButtonOpenMenu" Height="60" Width="60" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF31577E" Click="ButtonOpenMenu_Click" >
+                        <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
+                    </Button>
+                    <Button x:Name="ButtonCloseMenu" Visibility="Collapsed" Height="60" Width="60" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF31577E" Click="ButtonCloseMenu_Click" >
+                        <materialDesign:PackIcon Kind="ArrowLeft" Width="25" Height="25"/>
+                    </Button>
+                </Grid>
+                <ListView x:Name="ListViewMenu" Foreground="{DynamicResource PrimaryHueLightBrush}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="FileDocument" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="Explanation" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemHome" Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Image" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="picture of the Day" VerticalAlignment="Center" Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemCreate" Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Star" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="Planet Profiles" VerticalAlignment="Center" Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="AmazonClouddrive" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="media search" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="AlertOutline" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="Asteroids near Earth" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
