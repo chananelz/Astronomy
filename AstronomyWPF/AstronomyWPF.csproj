@@ -63,6 +63,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MVVM\ViewModels\Commands\PlanetsProfilesCommands.cs" />
+    <Compile Include="MVVM\ViewModels\ObservablPlanetsProfiles.cs" />
     <Compile Include="page1.0-1.5\Asteroids_near_Earth.xaml.cs">
       <DependentUpon>Asteroids_near_Earth.xaml</DependentUpon>
     </Compile>
@@ -90,6 +92,10 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
+    <Page Include="Assets\core1.1-1.5\Planet_Profiles_Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="page1.0-1.5\Asteroids_near_Earth.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,7 +180,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\core1.1-1.5\" />
     <Folder Include="Assets\font1.1-1.5\" />
     <Folder Include="Assets\image1.1-1.5\" />
     <Folder Include="MVVM\View\" />

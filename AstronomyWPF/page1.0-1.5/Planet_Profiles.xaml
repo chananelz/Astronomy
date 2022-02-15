@@ -6,9 +6,43 @@
       xmlns:local="clr-namespace:AstronomyWPF"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Planet_Profiles">
+      Title="Planet_Profiles" Background="Transparent">
+    <Border Background="#272537" CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Information"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="22"
+                       Margin="20,0,0,0"/>
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="Mercury" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Venus" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Mars" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Jupiter" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Saturn" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Uranus" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Neptune" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Earth" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
+
+
+            </StackPanel>
+        </Grid>
+        
+        
+    </Border>
+
+    <!--<Grid>
         <TextBlock FontSize="30" Text="Planet_Profiles" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-    </Grid>
+    </Grid>-->
 </Page>
