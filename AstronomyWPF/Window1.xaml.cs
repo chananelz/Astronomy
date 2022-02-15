@@ -24,7 +24,7 @@ namespace AstronomyWPF
             InitializeComponent();
             //Application.Current.Shutdown();
 
-            frame.Navigate(new Uri(@"page1.0-1.5\Welcome.xaml", UriKind.RelativeOrAbsolute));
+            frame.Navigate(new Uri(@"page1.0-1.5\Explanation0.xaml", UriKind.RelativeOrAbsolute));
         }
 
 

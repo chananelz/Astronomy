@@ -81,9 +81,6 @@
       <DependentUpon>Planet_Profiles.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\Commands\AddCommand.cs" />
-    <Compile Include="page1.0-1.5\Welcome.xaml.cs">
-      <DependentUpon>Welcome.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Window0.xaml.cs">
       <DependentUpon>Window0.xaml</DependentUpon>
     </Compile>
@@ -123,10 +120,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="page1.0-1.5\Planet_Profiles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="page1.0-1.5\Welcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
