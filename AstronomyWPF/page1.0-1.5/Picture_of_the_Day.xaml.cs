@@ -23,6 +23,8 @@ namespace AstronomyWPF
         public Picture_of_the_Day()
         {
             InitializeComponent();
+
+            image_today.Source = new BitmapImage(new Uri("http://www.clipartkid.com/images/817/pic-of-german-flag-clipart-best-VkuN37-clipart.jpeg"));
         }
     }
 }

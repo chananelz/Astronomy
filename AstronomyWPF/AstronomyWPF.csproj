@@ -66,21 +66,21 @@
     <Compile Include="page1.0-1.5\Asteroids_near_Earth.xaml.cs">
       <DependentUpon>Asteroids_near_Earth.xaml</DependentUpon>
     </Compile>
-    <Compile Include="converter\DetailsToStarConverter.cs" />
+    <Compile Include="MVVM\ViewModels\converter\DetailsToStarConverter.cs" />
     <Compile Include="page1.0-1.5\Explanation0.xaml.cs">
       <DependentUpon>Explanation0.xaml</DependentUpon>
     </Compile>
     <Compile Include="page1.0-1.5\media_search.xaml.cs">
       <DependentUpon>media_search.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\StarModel.cs" />
+    <Compile Include="MVVM\Models\StarModel.cs" />
     <Compile Include="page1.0-1.5\Picture_of_the_Day.xaml.cs">
       <DependentUpon>Picture_of_the_Day.xaml</DependentUpon>
     </Compile>
     <Compile Include="page1.0-1.5\Planet_Profiles.xaml.cs">
       <DependentUpon>Planet_Profiles.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\Commands\AddCommand.cs" />
+    <Compile Include="MVVM\ViewModels\Commands\AddCommand.cs" />
     <Compile Include="Window0.xaml.cs">
       <DependentUpon>Window0.xaml</DependentUpon>
     </Compile>
@@ -106,7 +106,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModels\StarVeiwModels.cs" />
+    <Compile Include="MVVM\ViewModels\StarVeiwModels.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -174,7 +174,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\" />
+    <Folder Include="Assets\core1.1-1.5\" />
+    <Folder Include="Assets\font1.1-1.5\" />
+    <Folder Include="Assets\image1.1-1.5\" />
+    <Folder Include="MVVM\View\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\B.png" />
