@@ -64,7 +64,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="MVVM\ViewModels\Commands\PlanetsProfilesCommands.cs" />
+    <Compile Include="MVVM\ViewModels\MainObservablPlanetsProfiles.cs" />
+    <Compile Include="MVVM\ViewModels\MercuryViewModel.cs" />
     <Compile Include="MVVM\ViewModels\ObservablPlanetsProfiles.cs" />
+    <Compile Include="MVVM\ViewModels\VenusViewModel.cs" />
+    <Compile Include="MVVM\View\Mercury.xaml.cs">
+      <DependentUpon>Mercury.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\Venus.xaml.cs">
+      <DependentUpon>Venus.xaml</DependentUpon>
+    </Compile>
     <Compile Include="page1.0-1.5\Asteroids_near_Earth.xaml.cs">
       <DependentUpon>Asteroids_near_Earth.xaml</DependentUpon>
     </Compile>
@@ -93,6 +102,14 @@
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
     <Page Include="Assets\core1.1-1.5\Planet_Profiles_Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\Mercury.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\Venus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,7 +199,6 @@
   <ItemGroup>
     <Folder Include="Assets\font1.1-1.5\" />
     <Folder Include="Assets\image1.1-1.5\" />
-    <Folder Include="MVVM\View\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\B.png" />
