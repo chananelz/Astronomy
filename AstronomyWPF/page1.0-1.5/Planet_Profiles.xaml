@@ -32,14 +32,14 @@
                        FontSize="22"
                        Margin="20,0,0,0"/>
             <StackPanel Grid.Row="1">
-                <RadioButton Content="Mercury" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}" IsChecked="True" Command="{Binding MercuryCommand}"/>
+                <RadioButton Content="Earth" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}" IsChecked="True"  Command="{Binding EarthCommand}"/>
+                <RadioButton Content="Mercury" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}" Command="{Binding MercuryCommand}"/>
                 <RadioButton Content="Venus" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}" Command= "{Binding VenusCommand}"/>
-                <RadioButton Content="Mars" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Jupiter" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Saturn" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Uranus" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Neptune" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Earth" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Mars" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"  Command="{Binding MarsCommand}" />
+                <RadioButton Content="Jupiter" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"  Command="{Binding JupiterCommand}" />
+                <RadioButton Content="Saturn" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"  Command="{Binding SaturnCommand}" />
+                <RadioButton Content="Uranus" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"  Command="{Binding UranusCommand}" />
+                <RadioButton Content="Neptune" Height="47" Foreground="White" FontSize="15" Style="{StaticResource MenuButtonTheme}"  Command="{Binding NeptuneCommand}" />
             </StackPanel>
 
             <ContentControl Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Margin="10" Content="{Binding CurrentView}"/>

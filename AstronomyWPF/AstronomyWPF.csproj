@@ -64,9 +64,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="MVVM\ViewModels\Commands\PlanetsProfilesCommands.cs" />
+    <Compile Include="MVVM\ViewModels\EarthViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\JupiterViewModel.cs" />
     <Compile Include="MVVM\ViewModels\MainObservablPlanetsProfiles.cs" />
+    <Compile Include="MVVM\ViewModels\MarsViewModel.cs" />
     <Compile Include="MVVM\ViewModels\MercuryViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\NeptuneViewModel.cs" />
     <Compile Include="MVVM\ViewModels\ObservablPlanetsProfiles.cs" />
+    <Compile Include="MVVM\ViewModels\SaturnViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\UranusViewModel.cs" />
     <Compile Include="MVVM\ViewModels\VenusViewModel.cs" />
     <Compile Include="MVVM\View\Earth.xaml.cs">
       <DependentUpon>Earth.xaml</DependentUpon>

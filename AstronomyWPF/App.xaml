@@ -24,6 +24,30 @@
             <DataTemplate DataType="{x:Type viewModel:VenusViewModel}">
                 <view:Venus/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:MarsViewModel}">
+                <view:Mars/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:JupiterViewModel}">
+                <view:Jupiter/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:SaturnViewModel}">
+                <view:Saturn/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:UranusViewModel}">
+                <view:Uranus/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:NeptuneViewModel}">
+                <view:Neptune/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:EarthViewModel}">
+                <view:Earth/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -1,6 +1,12 @@
-﻿
+﻿C:\AstronomyProject\AstronomyWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
 FC:\AstronomyProject\AstronomyWPF\App.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Earth.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Jupiter.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Mars.xaml;;
 FC:\AstronomyProject\AstronomyWPF\MVVM\View\Mercury.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Neptune.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Saturn.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Uranus.xaml;;
 FC:\AstronomyProject\AstronomyWPF\MVVM\View\Venus.xaml;;
 FC:\AstronomyProject\AstronomyWPF\page1.0-1.5\Asteroids_near_Earth.xaml;;
 FC:\AstronomyProject\AstronomyWPF\page1.0-1.5\Explanation0.xaml;;
@@ -11,10 +17,4 @@ FC:\AstronomyProject\AstronomyWPF\page1.0-1.5\Planet_Profiles.xaml;;
 FC:\AstronomyProject\AstronomyWPF\Window0.xaml;;
 FC:\AstronomyProject\AstronomyWPF\Window1.xaml;;
 FC:\AstronomyProject\AstronomyWPF\Window2.xaml;;
-FC:\AstronomyProject\AstronomyWPF\MVVM\View\Earth.xaml;;
-FC:\AstronomyProject\AstronomyWPF\MVVM\View\Jupiter.xaml;;
-FC:\AstronomyProject\AstronomyWPF\MVVM\View\Mars.xaml;;
-FC:\AstronomyProject\AstronomyWPF\MVVM\View\Neptune.xaml;;
-FC:\AstronomyProject\AstronomyWPF\MVVM\View\Saturn.xaml;;
-FC:\AstronomyProject\AstronomyWPF\MVVM\View\Uranus.xaml;;
 

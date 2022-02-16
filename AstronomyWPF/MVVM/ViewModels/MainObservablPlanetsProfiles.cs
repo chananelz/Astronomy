@@ -11,8 +11,23 @@ namespace AstronomyWPF.MVVM.ViewModels
     {
         public PlanetsProfilesCommands MercuryCommand { get; set; }
         public PlanetsProfilesCommands VenusCommand { get; set; }
+        public PlanetsProfilesCommands MarsCommand { get; set; }
+        public PlanetsProfilesCommands JupiterCommand { get; set; }
+        public PlanetsProfilesCommands SaturnCommand { get; set; }
+        public PlanetsProfilesCommands UranusCommand { get; set; }
+        public PlanetsProfilesCommands NeptuneCommand { get; set; }
+        public PlanetsProfilesCommands EarthCommand { get; set; }
+
+
         public MercuryViewModel MercuryVM { get; set; }
         public VenusViewModel VenusVM { get; set; }
+        public MarsViewModel MarsVM { get; set; }
+        public JupiterViewModel JupiterVM { get; set; }
+        public SaturnViewModel SaturnVM { get; set; }
+        public UranusViewModel UranusVM { get; set; }
+        public NeptuneViewModel NeptuneVM { get; set; }
+        public EarthViewModel EarthVM { get; set; }
+
 
         private object _currentView;
 
@@ -29,9 +44,15 @@ namespace AstronomyWPF.MVVM.ViewModels
         public MainObservablPlanetsProfiles()
         {
             MercuryVM = new MercuryViewModel();
-            VenusVM = new VenusViewModel(); 
+            VenusVM = new VenusViewModel();
+            MarsVM = new MarsViewModel();
+            JupiterVM = new JupiterViewModel();
+            SaturnVM = new SaturnViewModel();
+            UranusVM = new UranusViewModel();
+            NeptuneVM = new NeptuneViewModel();
+            EarthVM = new EarthViewModel();
 
-            CurrentView = MercuryVM;
+            CurrentView = EarthVM;
 
             MercuryCommand = new PlanetsProfilesCommands(o => 
             { 
@@ -42,6 +63,39 @@ namespace AstronomyWPF.MVVM.ViewModels
             VenusCommand = new PlanetsProfilesCommands(o =>
             {
                 CurrentView = VenusVM;
+            });
+
+            MarsCommand = new PlanetsProfilesCommands(o =>
+            {
+                CurrentView = MarsVM;
+
+            });
+
+            JupiterCommand = new PlanetsProfilesCommands(o =>
+            {
+                CurrentView = JupiterVM;
+            });
+
+            SaturnCommand = new PlanetsProfilesCommands(o =>
+            {
+                CurrentView = SaturnVM;
+
+            });
+
+            UranusCommand = new PlanetsProfilesCommands(o =>
+            {
+                CurrentView = UranusVM;
+            });
+
+            NeptuneCommand = new PlanetsProfilesCommands(o =>
+            {
+                CurrentView = NeptuneVM;
+
+            });
+
+            EarthCommand = new PlanetsProfilesCommands(o =>
+            {
+                CurrentView = EarthVM;
             });
 
 
