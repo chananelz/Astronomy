@@ -177,6 +177,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Assets\font1.1-1.5\Raleway-VariableFont_wght.ttf" />
+    <Resource Include="Assets\font1.1-1.5\Poppins-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -197,7 +199,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\font1.1-1.5\" />
     <Folder Include="Assets\image1.1-1.5\" />
   </ItemGroup>
   <ItemGroup>
