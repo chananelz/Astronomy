@@ -34,10 +34,10 @@
                                TextWrapping="Wrap"
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
-                    <ScrollViewer Height="120" Width="170" Margin="6.5,2,0,4"  VerticalScrollBarVisibility="Visible"    >
+                    <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
                         <TextBlock Text= "Mercury is the smallest planet in our solar system – only slightly larger than Earth's Moon. " 
                                Foreground="White"
-                               FontSize="18"
+                               FontSize="15"
                                Margin="10,5,5,0" 
                                VerticalAlignment="Stretch" 
                                TextWrapping="Wrap"
@@ -62,10 +62,10 @@
                                TextWrapping="Wrap"
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
-                    <ScrollViewer Height="120" Width="170" Margin="6.5,2,0,4"  VerticalScrollBarVisibility="Visible"    >
+                    <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
                         <TextBlock Text= "Mercury is the planet that orbits the closest to the Sun." 
                                Foreground="White"
-                               FontSize="18"
+                               FontSize="15"
                                Margin="10,5,5,0" 
                                VerticalAlignment="Stretch" 
                                TextWrapping="Wrap"
@@ -90,10 +90,10 @@
                                TextWrapping="Wrap"
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
-                    <ScrollViewer Height="120" Width="170" Margin="6.5,2,0,4"  VerticalScrollBarVisibility="Visible"    >
+                    <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
                         <TextBlock Text= "Mercury is the fastest planet in our solar system – traveling through space at nearly 29 miles (47 kilometers) per second. The closer a planet is to the Sun, the faster it travels. Since Mercury is the fastest planet and has the shortest distance to travel around the Sun, it has the shortest year of all the planets in our solar system – 88 days." 
                                Foreground="White"
-                               FontSize="18"
+                               FontSize="15"
                                Margin="10,5,5,0" 
                                VerticalAlignment="Stretch" 
                                TextWrapping="Wrap"
@@ -118,10 +118,10 @@
                                TextWrapping="Wrap"
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
-                    <ScrollViewer Height="120" Width="170" Margin="6.5,2,0,4"  VerticalScrollBarVisibility="Visible"    >
+                    <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
                         <TextBlock Text= "Mercury is a rocky planet, also known as a terrestrial planet. Mercury has a solid, cratered surface, much like the Earth's moon." 
                                Foreground="White"
-                               FontSize="18"
+                               FontSize="15"
                                Margin="10,5,5,0" 
                                VerticalAlignment="Stretch" 
                                TextWrapping="Wrap"
@@ -146,10 +146,10 @@
                                TextWrapping="Wrap"
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
-                    <ScrollViewer Height="120" Width="170" Margin="6.5,2,0,4"  VerticalScrollBarVisibility="Visible"    >
+                    <ScrollViewer Height="105" Width="170" Margin="-5,2,0,4" VerticalScrollBarVisibility="Hidden"    >
                         <TextBlock Text= "Mercury's thin atmosphere, or exosphere, is composed mostly of oxygen (O2), sodium (Na), hydrogen (H2), helium (He), and potassium (K). " 
                                Foreground="White"
-                               FontSize="18"
+                               FontSize="15"
                                Margin="10,5,5,0" 
                                VerticalAlignment="Stretch" 
                                TextWrapping="Wrap"
@@ -174,10 +174,10 @@
                                TextWrapping="Wrap"
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
-                    <ScrollViewer Height="120" Width="170" Margin="6.5,2,0,4"  VerticalScrollBarVisibility="Visible"    >
+                    <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
                         <TextBlock Text= "Mercury has no moons." 
                                Foreground="White"
-                               FontSize="18"
+                               FontSize="15"
                                Margin="10,5,5,0" 
                                VerticalAlignment="Stretch" 
                                TextWrapping="Wrap"
@@ -202,10 +202,10 @@
                                TextWrapping="Wrap"
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
-                    <ScrollViewer Height="120" Width="170" Margin="6.5,2,0,4"  VerticalScrollBarVisibility="Visible"    >
+                    <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
                         <TextBlock Text= "There are no rings around Mercury." 
                                Foreground="White"
-                               FontSize="18"
+                               FontSize="15"
                                Margin="10,5,5,0" 
                                VerticalAlignment="Stretch" 
                                TextWrapping="Wrap"
@@ -230,10 +230,10 @@
                                TextWrapping="Wrap"
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
-                    <ScrollViewer Height="105" Width="170" Margin="6.5,2,0,4"  VerticalScrollBarVisibility="Visible"    >
+                    <ScrollViewer Height="105" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
                         <TextBlock Text= "It is unlikely that life as we know it could survive on Mercury due to solar radiation, and extreme temperatures." 
                                Foreground="White"
-                               FontSize="18"
+                               FontSize="15"
                                Margin="10,5,5,0" 
                                VerticalAlignment="Stretch" 
                                TextWrapping="Wrap"
@@ -259,10 +259,10 @@
                                TextWrapping="Wrap"
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
-                    <ScrollViewer Height="120" Width="170" Margin="6.5,2,0,4"  VerticalScrollBarVisibility="Visible"    >
+                    <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
                         <TextBlock Text= "Standing on Mercury's surface at its closest approach to the Sun, our star would appear more than three times larger than it does on Earth." 
                                Foreground="White"
-                               FontSize="18"
+                               FontSize="15"
                                Margin="10,5,5,0" 
                                VerticalAlignment="Stretch" 
                                TextWrapping="Wrap"
@@ -287,10 +287,10 @@
                                TextWrapping="Wrap"
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
-                    <ScrollViewer Height="105" Width="170" Margin="6.5,2,0,4"  VerticalScrollBarVisibility="Visible"    >
+                    <ScrollViewer Height="105" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
                         <TextBlock Text= "Two NASA missions have explored Mercury: Mariner 10 was the first to fly by Mercury, and MESSENGER was the first to orbit. ESA's BepiColombo is on its way to Mercury." 
                                Foreground="White"
-                               FontSize="18"
+                               FontSize="15"
                                Margin="10,5,5,0" 
                                VerticalAlignment="Stretch" 
                                TextWrapping="Wrap"
