@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="AstronomyWPF.MVVM.View.Venus"
+﻿<UserControl x:Class="AstronomyWPF.MVVM.View.Saturn"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -26,7 +26,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "TOXIC TWIN" 
+                    <TextBlock Text= "A COLOSSAL PLANET" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -35,7 +35,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus is often called Earth's twin because they're similar in size and structure, but Venus has extreme surface heat and a dense, toxic atmosphere. If the Sun were as tall as a typical front door, Earth and Venus would each be about the size of a nickel." 
+                        <TextBlock Text= "Nine Earths side by side would almost span Saturn's diameter. That doesn't include Saturn's rings." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -54,7 +54,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "SECOND ROCK" 
+                    <TextBlock Text= "IN DIM LIGHT" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -63,7 +63,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus is the second closest planet to the Sun, orbiting at a distance of about 67 million miles (108 million kilometers)." 
+                        <TextBlock Text= "Saturn is the sixth planet from our Sun (a star) and orbits at a distance of about 886 million miles (1.4 billion kilometers) from the Sun." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -82,7 +82,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "FASTEST PLANET" 
+                    <TextBlock Text= "SHORT DAY, LONG YEAR" 
                                Foreground="White"
                                FontSize="17"
                                Margin="10,5,5,0" 
@@ -91,7 +91,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus rotates very slowly on its axis – one day on Venus lasts 243 Earth days. The planet orbits the Sun faster than Earth, however, so one year on Venus takes only about 225 Earth days, making a Venusian day longer than its year!" 
+                        <TextBlock Text= "Saturn takes about 10.7 hours (no one knows precisely) to rotate on its axis once—a Saturn day—and 29 Earth years to orbit the sun." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -110,7 +110,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "DIVERSE TERRAIN" 
+                    <TextBlock Text= "GAS GIANT" 
                                Foreground="White"
                                FontSize="17"
                                Margin="10,5,5,0" 
@@ -119,7 +119,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus has a solid surface covered in dome-like volcanoes, rifts, and mountains, with expansive volcanic plains and vast, ridged plateaus." 
+                        <TextBlock Text= "Saturn is a gas-giant planet and therefore does not have a solid surface like Earth's. But it might have a solid core somewhere in there." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -138,7 +138,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "YOUTHFUL SURFACE" 
+                    <TextBlock Text= "HOT AIR" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -147,7 +147,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="105" Width="170" Margin="-5,2,0,4" VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "The average surface of Venus is less than a billion years old, and possibly as young as 150 million years old – which is relatively young from a geological perspective. This is a major conundrum for scientists – they don't know exactly what happened that made Venus completely resurface itself." 
+                        <TextBlock Text= "Saturn's atmosphere is made up mostly of hydrogen (H2) and helium (He)." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -166,7 +166,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "RUNAWAY GREENHOUSE" 
+                    <TextBlock Text= "MINI SOLAR SYSTEM" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -175,7 +175,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus' thick atmosphere traps heat creating a runaway greenhouse effect – making it the hottest planet in our solar system with surface temperatures hot enough to melt lead. The greenhouse effect makes Venus roughly 700°F (390°C) hotter than it would be without a greenhouse effect." 
+                        <TextBlock Text= "Saturn has 53 known moons with an additional 29 moons awaiting confirmation of their discovery—that is a total of 82 moons." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -194,7 +194,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "STINKY CLOUDS" 
+                    <TextBlock Text= "GLORIOUS RINGS" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -203,7 +203,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus is permanently shrouded in thick, toxic clouds of sulfuric acid that start at an altitude of 28 to 43 miles (45 to 70 kilometers). The clouds smell like rotten eggs!" 
+                        <TextBlock Text= "Saturn has the most spectacular ring system, with seven rings and several gaps and divisions between them." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -222,7 +222,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "SPACECRAFT MAGNET" 
+                    <TextBlock Text= "RARE DESTINATION" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -231,7 +231,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="105" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus was the first planet explored by a spacecraft and was intensely studied early in the history of space exploration. Venus was also the first planet whose surface was reached by a spacecraft from Earth. The intense heat means landers have only survived for a couple of hours." 
+                        <TextBlock Text= "Few missions have visited Saturn: Pioneer 11 and Voyagers 1 and 2 flew by; But Cassini orbited Saturn 294 times from 2004 to 2017." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -251,7 +251,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "LIFE ON VENUS" 
+                    <TextBlock Text= "LIFELESS BEHEMOTH" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -260,7 +260,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus is an unlikely place for life as we know it, but some scientists theorize microbes might exist high in the clouds where it's cooler and the pressure is similar to Earth's surface. Phosphine, a possible indicator of microbial life, has been observed in the clouds." 
+                        <TextBlock Text= "Saturn cannot support life as we know it, but some of Saturn's moons have conditions that might support life." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -279,7 +279,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "BACKWARD SUNRISE" 
+                    <TextBlock Text= "ADD A DASH OF EARTH" 
                                Foreground="White"
                                FontSize="17"
                                Margin="10,5,5,0" 
@@ -288,7 +288,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="105" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus rotates backward on its axis compared to most planets in our solar system. This means the Sun rises in the west and sets in the east, opposite of what we see on Earth." 
+                        <TextBlock Text= "About two tons of Saturn's mass came from Earth—the Cassini spacecraft was intentionally vaporized in Saturn's atmosphere in 2017." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -307,7 +307,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "Venus" 
+                    <TextBlock Text= "Saturn" 
                                Foreground="White"
                                FontSize="25"
                                Margin="10,5,5,0" 
@@ -316,9 +316,11 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="105" Width="315" Margin="-10,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus is the second planet from the Sun and Earth's closest planetary neighbor. Even though Mercury is closer to the Sun, Venus is the hottest planet in our solar system. Its thick atmosphere is full of the greenhouse gas carbon dioxide, and it has clouds of sulfuric acid. The atmosphere traps heat, making it feel like a furnace on the surface. It's so hot on Venus, the metal lead would melt.
+                        <TextBlock Text= "Saturn isn't the only planet to have rings, but it definitely has the most beautiful ones.
 
-Venus is sometimes called Earth's twin because it's similar in size and structure, but the planets are very different in other ways. In addition to being extremely hot, Venus is unusual because it spins in the opposite direction of Earth and most other planets. It also has a very slow rotation making its day longer than its year." 
+The rings we see are made of groups of tiny ringlets that surround Saturn. They're made of chunks of ice and rock.
+
+Like Jupiter, Saturn is mostly a ball of hydrogen and helium." 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -330,6 +332,6 @@ Venus is sometimes called Earth's twin because it's similar in size and structur
                 </StackPanel>
             </Grid>
         </Border>
-
     </Grid>
 </UserControl>
+

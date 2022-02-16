@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="AstronomyWPF.MVVM.View.Venus"
+﻿<UserControl x:Class="AstronomyWPF.MVVM.View.Uranus"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -26,7 +26,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "TOXIC TWIN" 
+                    <TextBlock Text= "HORT-ISH DAY, LONGISH YEAR" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -35,7 +35,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus is often called Earth's twin because they're similar in size and structure, but Venus has extreme surface heat and a dense, toxic atmosphere. If the Sun were as tall as a typical front door, Earth and Venus would each be about the size of a nickel." 
+                        <TextBlock Text= "Uranus takes about 17 hours to rotate once (a Uranian day), and about 84 Earth years to complete an orbit of the Sun (a Uranian year)." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -54,7 +54,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "SECOND ROCK" 
+                    <TextBlock Text= "HUGE" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -63,7 +63,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus is the second closest planet to the Sun, orbiting at a distance of about 67 million miles (108 million kilometers)." 
+                        <TextBlock Text= "Uranus is about four times wider than Earth. If Earth were a large apple, Uranus would be the size of a basketball." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -82,7 +82,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "FASTEST PLANET" 
+                    <TextBlock Text= "SEVENTH WANDERER" 
                                Foreground="White"
                                FontSize="17"
                                Margin="10,5,5,0" 
@@ -91,7 +91,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus rotates very slowly on its axis – one day on Venus lasts 243 Earth days. The planet orbits the Sun faster than Earth, however, so one year on Venus takes only about 225 Earth days, making a Venusian day longer than its year!" 
+                        <TextBlock Text= "Uranus orbits our Sun, a star, and is the seventh planet from the Sun at a distance of about 1.8 billion miles (2.9 billion kilometers)." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -110,7 +110,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "DIVERSE TERRAIN" 
+                    <TextBlock Text= "ICE GIANT" 
                                Foreground="White"
                                FontSize="17"
                                Margin="10,5,5,0" 
@@ -119,7 +119,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus has a solid surface covered in dome-like volcanoes, rifts, and mountains, with expansive volcanic plains and vast, ridged plateaus." 
+                        <TextBlock Text= "Uranus is an ice giant. Most of its mass is a hot, dense fluid of icy materials – water, methane and ammonia – above a small rocky core." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -138,7 +138,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "YOUTHFUL SURFACE" 
+                    <TextBlock Text= "GASSY" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -147,7 +147,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="105" Width="170" Margin="-5,2,0,4" VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "The average surface of Venus is less than a billion years old, and possibly as young as 150 million years old – which is relatively young from a geological perspective. This is a major conundrum for scientists – they don't know exactly what happened that made Venus completely resurface itself." 
+                        <TextBlock Text= "Uranus has an atmosphere made mostly of molecular hydrogen and atomic helium, with a small amount of methane." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -166,7 +166,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "RUNAWAY GREENHOUSE" 
+                    <TextBlock Text= "MANY MOONS" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -175,7 +175,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus' thick atmosphere traps heat creating a runaway greenhouse effect – making it the hottest planet in our solar system with surface temperatures hot enough to melt lead. The greenhouse effect makes Venus roughly 700°F (390°C) hotter than it would be without a greenhouse effect." 
+                        <TextBlock Text= "Uranus has 27 known moons, and they are named after characters from the works of William Shakespeare and Alexander Pope." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -194,7 +194,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "STINKY CLOUDS" 
+                    <TextBlock Text= "THE OTHER RINGED WORLD" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -203,7 +203,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus is permanently shrouded in thick, toxic clouds of sulfuric acid that start at an altitude of 28 to 43 miles (45 to 70 kilometers). The clouds smell like rotten eggs!" 
+                        <TextBlock Text= "Uranus has 13 known rings. The inner rings are narrow and dark and the outer rings are brightly colored." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -222,7 +222,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "SPACECRAFT MAGNET" 
+                    <TextBlock Text= "A BIT LONELY" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -231,7 +231,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="105" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus was the first planet explored by a spacecraft and was intensely studied early in the history of space exploration. Venus was also the first planet whose surface was reached by a spacecraft from Earth. The intense heat means landers have only survived for a couple of hours." 
+                        <TextBlock Text= "Voyager 2 is the only spacecraft to fly by Uranus. No spacecraft has orbited this distant planet to study it at length and up close." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -251,7 +251,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "LIFE ON VENUS" 
+                    <TextBlock Text= "LIFELESS" 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
@@ -260,7 +260,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="120" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus is an unlikely place for life as we know it, but some scientists theorize microbes might exist high in the clouds where it's cooler and the pressure is similar to Earth's surface. Phosphine, a possible indicator of microbial life, has been observed in the clouds." 
+                        <TextBlock Text= "Uranus cannot support life as we know it." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -279,7 +279,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "BACKWARD SUNRISE" 
+                    <TextBlock Text= "ONE COOL FACT" 
                                Foreground="White"
                                FontSize="17"
                                Margin="10,5,5,0" 
@@ -288,7 +288,7 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="105" Width="170" Margin="0,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus rotates backward on its axis compared to most planets in our solar system. This means the Sun rises in the west and sets in the east, opposite of what we see on Earth." 
+                        <TextBlock Text= "Like Venus, Uranus rotates east to west. But Uranus is unique in that it rotates on its side." 
                                Foreground="White"
                                FontSize="15"
                                Margin="10,5,5,0" 
@@ -307,7 +307,7 @@
             </Border.Clip>
             <Grid>
                 <StackPanel>
-                    <TextBlock Text= "Venus" 
+                    <TextBlock Text= "Uranus" 
                                Foreground="White"
                                FontSize="25"
                                Margin="10,5,5,0" 
@@ -316,9 +316,11 @@
                                 FontFamily="/Assets/font1.1-1.5/#Raleway"
                                />
                     <ScrollViewer Height="105" Width="315" Margin="-10,2,0,4"  VerticalScrollBarVisibility="Hidden"    >
-                        <TextBlock Text= "Venus is the second planet from the Sun and Earth's closest planetary neighbor. Even though Mercury is closer to the Sun, Venus is the hottest planet in our solar system. Its thick atmosphere is full of the greenhouse gas carbon dioxide, and it has clouds of sulfuric acid. The atmosphere traps heat, making it feel like a furnace on the surface. It's so hot on Venus, the metal lead would melt.
+                        <TextBlock Text= "Uranus is made of water, methane, and ammonia fluids above a small rocky center. Its atmosphere is made of hydrogen and helium like Jupiter and Saturn, but it also has methane. The methane makes Uranus blue.
 
-Venus is sometimes called Earth's twin because it's similar in size and structure, but the planets are very different in other ways. In addition to being extremely hot, Venus is unusual because it spins in the opposite direction of Earth and most other planets. It also has a very slow rotation making its day longer than its year." 
+Uranus also has faint rings. The inner rings are narrow and dark. The outer rings are brightly colored and easier to see.
+
+Like Venus, Uranus rotates in the opposite direction as most other planets. And unlike any other planet, Uranus rotates on its side." 
                                Foreground="White"
                                FontSize="18"
                                Margin="10,5,5,0" 
