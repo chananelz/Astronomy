@@ -269,5 +269,8 @@
   <ItemGroup>
     <Resource Include="Assets\image1\Russia-Space-Advertisement4.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Videos\open.mp4" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

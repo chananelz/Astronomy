@@ -9,6 +9,22 @@
       Title="Explanation0">
 
     <Grid>
-        <TextBlock FontSize="30" Text="Explanation0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock FontSize="25" Text="Watch this video to understand the danger of asteroids near Earth:" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Grid Margin="10,53,10,10" Background="Bisque">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <MediaElement Source="C:\AstronomyProject\AstronomyWPF\Assets\Videos\open.mp4" LoadedBehavior="Manual" Name="mePlayer" />
+            <StackPanel Grid.Row="1">
+                <Label Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" Margin="5" />
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button Name="btnPlay" Click="btnPlay_Click">Play</Button>
+                    <Button Name="btnPause" Margin="5,0" Click="btnPause_Click">Pause</Button>
+                    <Button Name="btnStop" Click="btnStop_Click">Stop</Button>
+                </WrapPanel>
+            </StackPanel>
+
+        </Grid>
     </Grid>
 </Page>
