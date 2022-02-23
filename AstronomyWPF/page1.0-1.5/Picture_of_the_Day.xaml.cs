@@ -23,9 +23,8 @@ namespace AstronomyWPF
         public Picture_of_the_Day()
         {
             InitializeComponent();
-            string url_picture_of_the_day = "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/hubble_arp282_potw2206a.jpg";
-
-            image_today.Source = new BitmapImage(new Uri(url_picture_of_the_day));
+            var BL = new AstronomyBL.PictureOfTheDayFinder();
+            image_today.Source = new BitmapImage(new Uri(BL.Get_today_picture_of_the_day()));
         }
         private void Show_Picture(object sender, RoutedEventArgs e)
         {
