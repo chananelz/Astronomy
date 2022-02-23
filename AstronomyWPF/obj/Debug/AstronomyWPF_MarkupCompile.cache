@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\AstronomyProject\AstronomyWPF\obj\Debug\
+C:\Users\elyak\source\repos\AstronomyProject\AstronomyWPF\obj\Debug\
 AstronomyWPF
 none
 false
 DEBUG;TRACE
-C:\AstronomyProject\AstronomyWPF\App.xaml
+C:\Users\elyak\source\repos\AstronomyProject\AstronomyWPF\App.xaml
 18-91969863
 1-2058505102
 36-1415325228
-17-1008770238
+17-1406730098
 Assets\core1.1-1.5\Planet_Profiles_Theme.xaml;MVVM\View\Earth.xaml;MVVM\View\Jupiter.xaml;MVVM\View\Mars.xaml;MVVM\View\Mercury.xaml;MVVM\View\Neptune.xaml;MVVM\View\Saturn.xaml;MVVM\View\Uranus.xaml;MVVM\View\Venus.xaml;page1.0-1.5\Asteroids_near_Earth.xaml;page1.0-1.5\Explanation0.xaml;MainWindow.xaml;page1.0-1.5\media_search.xaml;page1.0-1.5\Picture_of_the_Day.xaml;page1.0-1.5\Planet_Profiles.xaml;Window0.xaml;Window1.xaml;Window2.xaml;
 
 False
