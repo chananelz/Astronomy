@@ -23,8 +23,17 @@ namespace AstronomyWPF
         public Picture_of_the_Day()
         {
             InitializeComponent();
+            string url_picture_of_the_day = "http://www.clipartkid.com/images/817/pic-of-german-flag-clipart-best-VkuN37-clipart.jpeg";
 
-            image_today.Source = new BitmapImage(new Uri("http://www.clipartkid.com/images/817/pic-of-german-flag-clipart-best-VkuN37-clipart.jpeg"));
+            image_today.Source = new BitmapImage(new Uri(url_picture_of_the_day));
+        }
+        private void Show_Picture(object sender, RoutedEventArgs e)
+        {
+            var date = Convert.ToString(PictureDate.Text);
+            var BL = new AstronomyBL.PictureOfTheDayFinder();
+
+            string url_picture_of_the_day = BL.Get_picture_of_the_day_By_day(date)[0].Url;
+            image_today.Source = new BitmapImage(new Uri(url_picture_of_the_day));
         }
     }
 }
