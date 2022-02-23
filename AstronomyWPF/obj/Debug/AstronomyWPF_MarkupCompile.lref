@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿C:\Users\elyak\source\repos\AstronomyProject\AstronomyWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
 FC:\Users\elyak\source\repos\AstronomyProject\AstronomyWPF\App.xaml;;
 FC:\Users\elyak\source\repos\AstronomyProject\AstronomyWPF\MVVM\View\Earth.xaml;;
@@ -17,4 +18,25 @@ FC:\Users\elyak\source\repos\AstronomyProject\AstronomyWPF\page1.0-1.5\Planet_Pr
 FC:\Users\elyak\source\repos\AstronomyProject\AstronomyWPF\Window0.xaml;;
 FC:\Users\elyak\source\repos\AstronomyProject\AstronomyWPF\Window1.xaml;;
 FC:\Users\elyak\source\repos\AstronomyProject\AstronomyWPF\Window2.xaml;;
+=======
+﻿C:\AstronomyProject\AstronomyWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+FC:\AstronomyProject\AstronomyWPF\App.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Earth.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Jupiter.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Mars.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Mercury.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Neptune.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Saturn.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Uranus.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MVVM\View\Venus.xaml;;
+FC:\AstronomyProject\AstronomyWPF\page1.0-1.5\Asteroids_near_Earth.xaml;;
+FC:\AstronomyProject\AstronomyWPF\page1.0-1.5\Explanation0.xaml;;
+FC:\AstronomyProject\AstronomyWPF\MainWindow.xaml;;
+FC:\AstronomyProject\AstronomyWPF\page1.0-1.5\media_search.xaml;;
+FC:\AstronomyProject\AstronomyWPF\page1.0-1.5\Picture_of_the_Day.xaml;;
+FC:\AstronomyProject\AstronomyWPF\page1.0-1.5\Planet_Profiles.xaml;;
+FC:\AstronomyProject\AstronomyWPF\Window0.xaml;;
+FC:\AstronomyProject\AstronomyWPF\Window1.xaml;;
+FC:\AstronomyProject\AstronomyWPF\Window2.xaml;;
+>>>>>>> b86c0a81b3acc979997f341a1dca31ed60182e5e
 
