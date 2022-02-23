@@ -21,9 +21,15 @@
             <ColumnDefinition Width="75*" />
             <ColumnDefinition Width="25*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="1" Grid.ColumnSpan="2" FontSize="30" Text="Picture_of_the_Day" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="250"/>
-        <Button Content="חפש" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Width="75" Click="Show_Picture"/>
-        <TextBox x:Name="PictureDate" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="enter date" VerticalAlignment="Top" Width="120"/>
+        <StackPanel Grid.Column="2">
+            <TextBlock FontSize="20" Text="select day:" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <DatePicker Name="calendar_picker" FontSize="30" IsTodayHighlighted="True" SelectedDateFormat="Short" />
+            <Button Content="show picture of this date" Margin="10" HorizontalAlignment="Center"  Click="Show_Picture"/>
+
+
+
+        </StackPanel>
+        <TextBlock Grid.Column="1" FontSize="20" Text="The Picture of the Day:" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="250"/>
         <Image x:Name="image_today" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2"  />
     </Grid>
 </Page>
