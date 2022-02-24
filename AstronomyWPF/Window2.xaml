@@ -5,19 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AstronomyWPF"
         mc:Ignorable="d"
-        Title="Window2" Height="450" Width="800">
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="MainWindow" Height="600" Width="1080" WindowStyle="None" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" Background="#FF3A3A3A">
     <Grid>
-        <Viewbox Margin="120,0,120,0">
-            <StackPanel Orientation="Vertical" Width="400">
-                <ScrollViewer>
-                    <TextBlock />
-                </ScrollViewer>
-                <TextBlock x:Name="subHeaderText" 
-                   FontSize="20" 
-                   TextWrapping="Wrap" 
-                   Foreground="Black"
-                   Text="Lorem ipsum dolor, lorem isum dolo44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444r,Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet " />
-            </StackPanel>
-        </Viewbox>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Margin="10">
+            <Grid Height="60">
+                <TextBox Background="White" Padding="10 0 25 0"/>
+                <materialDesign:PackIcon Kind="MapMarker" VerticalAlignment="Center" Margin="2" Width="40" Height="40" Foreground="Red"/>
+                <Button HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}">
+                    <materialDesign:PackIcon Kind="AccountRemove" VerticalAlignment="Center" Width="40" Height="40"/>
+                </Button>
+            </Grid>
+            <ListView>
+                <ListViewItem>
+                    <Border BorderBrush="LightGray" BorderThickness="0 0 0 1" Width="260">
+                        <Grid Height="50">
+                            <StackPanel Height="50">
+                                <TextBlock Text="La Casita Grill"/>
+                               
+                                <TextBlock Text="Open until 6:00PM" Opacity="0.7"/>
+                            </StackPanel>
+                            <Image HorizontalAlignment="Right" Width="50" Height="50"  Stretch="UniformToFill" />
+                        </Grid>
+                    </Border>
+                </ListViewItem>
+                <ListViewItem>
+                    <Border BorderBrush="LightGray" BorderThickness="0 0 0 1" Width="260">
+                        <Grid Height="50">
+                            <StackPanel Height="50">
+                                <TextBlock Text="The Pizza"/>
+                                <TextBlock Text="Open until 10:00PM" Opacity="0.7"/>
+                            </StackPanel>
+                            <Image HorizontalAlignment="Right" Width="50" Height="50" Stretch="UniformToFill" />
+                        </Grid>
+                    </Border>
+                </ListViewItem>
+            </ListView>
+        </StackPanel>
+
+        <m:Map CredentialsProvider="AttsGkqIHCOIEA11KtQZDphl5bi8lppin64jeg-ZOOhiS4cdHA_EXJwHSbyZi4Xo" Mode="Road" Grid.Column="1" Grid.Row="1" ZoomLevel="10" Center="35.680366, 51.435522">
+            <Canvas
+        m:MapLayer.Position="35.680366, 51.435522"
+        m:MapLayer.PositionOrigin="BottomCenter" Width="30" Height="30"
+        >
+                <materialDesign:PackIcon Kind="MapMarker" Width="30" Height="30" Foreground="Red"/>
+            </Canvas>
+        </m:Map>
     </Grid>
 </Window>

@@ -4,11 +4,172 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AstronomyWPF"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="media_search">
 
-    <Grid>
-        <TextBlock FontSize="30" Text="media_search" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid Background="#FF44325F">
+        <Grid Height="70" VerticalAlignment="Top" Background="Silver">
+            <Image Source="\Assets\image1.1-1.5\russia_flag.png" HorizontalAlignment="Left" Margin="5" Height="50"/>
+            <TextBlock Text="✨Search photos of planet ✨" Margin="20" FontSize="30" Foreground="#FF2A6088" HorizontalAlignment="Center" FontFamily="Felix Titling"/>
+
+        </Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20" >
+            <StackPanel HorizontalAlignment="Right" Margin="0,20,0,0">
+                <Ellipse Height="150" Width="150" Stroke="White" StrokeThickness="3">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="\Assets\image1.1-1.5\roscosmo.jpg" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBlock FontFamily="Nirmala UI" Text="Popular search:" FontSize="20" Margin="13" VerticalAlignment="Center" Foreground="White"/>
+
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 80">
+            <TextBox Width="150" materialDesign:HintAssist.Hint="SEARCH" Foreground="White"/>
+            <materialDesign:PackIcon Kind="AccountSearch" Foreground="White" VerticalAlignment="Center"/>
+        </StackPanel>
+        <ListView HorizontalAlignment="Right" Margin="0 250 0 0" >
+            <ListViewItem Height="50" Width="200">
+                <Grid Height="30" Width="250">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="141*"/>
+                        <ColumnDefinition Width="109*"/>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Width="30" Height="30" StrokeThickness="0.5" Stroke="White" HorizontalAlignment="Left">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="\Assets\image1.1-1.5\Earth.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Earth" FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1"/>
+                </Grid>
+            </ListViewItem>
+            <ListViewItem Height="50" Width="200">
+                <Grid Height="30" Width="250">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="141*"/>
+                        <ColumnDefinition Width="109*"/>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Width="30" Height="30" StrokeThickness="0.5" Stroke="White" HorizontalAlignment="Left">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="\Assets\image1.1-1.5\Mercury.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Mercury " FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1"/>
+                </Grid>
+            </ListViewItem>
+            <ListViewItem Height="50" Width="200">
+                <Grid Height="30" Width="250">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="141*"/>
+                        <ColumnDefinition Width="109*"/>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Width="30" Height="30" StrokeThickness="0.5" Stroke="White" HorizontalAlignment="Left">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="\Assets\image1.1-1.5\Venus.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Venus" FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1"/>
+                </Grid>
+            </ListViewItem>
+            <ListViewItem Height="50" Width="200">
+                <Grid Height="30" Width="250">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="141*"/>
+                        <ColumnDefinition Width="109*"/>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Width="30" Height="30" StrokeThickness="0.5" Stroke="White" HorizontalAlignment="Left">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="\Assets\image1.1-1.5\Mars.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Mars" FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1"/>
+                </Grid>
+            </ListViewItem>
+            <ListViewItem Height="50" Width="200">
+                <Grid Height="30" Width="250">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="141*"/>
+                        <ColumnDefinition Width="109*"/>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Width="30" Height="30" StrokeThickness="0.5" Stroke="White" HorizontalAlignment="Left">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="\Assets\image1.1-1.5\Jupiter.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Jupiter" FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1"/>
+                </Grid>
+            </ListViewItem>
+        </ListView>
+        <StackPanel Margin="0 100 200 0">
+            <StackPanel Orientation="Horizontal" Margin="10,0,0,0" >
+                <Ellipse Height="50" Width="50" Stroke="White" StrokeThickness="3">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="\Assets\image1.1-1.5\logo1.jpg" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Height="50" Width="50" Margin="10" Stroke="White" StrokeThickness="3">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="\Assets\image1.1-1.5\logo2.jpg" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Height="50" Width="50" Margin="10" Stroke="White" StrokeThickness="3">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="\Assets\image1.1-1.5\logo3.jpg" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Height="50" Width="50" Margin="10" Stroke="White" StrokeThickness="3">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="\Assets\image1.1-1.5\logo4.jpg" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Height="50" Width="50" Margin="10" Stroke="White" StrokeThickness="3">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="\Assets\image1.1-1.5\logo5.png" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Height="50" Width="50" Margin="10" Stroke="White" StrokeThickness="3">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="\Assets\image1.1-1.5\logo5.5.jpg" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Height="50" Width="50" Margin="10" Stroke="White" StrokeThickness="3">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="\Assets\image1.1-1.5\logo6.jpg" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Height="50" Width="50" Margin="10" Stroke="White" StrokeThickness="3">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="\Assets\image1.1-1.5\logo8.jpg" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+            </StackPanel>
+            <ScrollViewer Height="350" VerticalScrollBarVisibility="Hidden">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
     </Grid>
 </Page>

@@ -37,11 +37,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="De.TorstenMandelkow.MetroChart, Version=0.9.5818.20693, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ModernUICharts.WPF.Beta.0.9.1\lib\De.TorstenMandelkow.MetroChart.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
     <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.1.953, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignThemes.2.3.1.953\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Maps.MapControl.WPF">
+      <HintPath>..\..\Program Files (x86)\Bing Maps WPF Control\V1\Libraries\Microsoft.Maps.MapControl.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Panteam.MetroChart, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>packages\Panteam.MetroChart.1.0.1\lib\net40\Panteam.MetroChart.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -246,9 +255,7 @@
       <Name>AstronomyDP</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\image1.1-1.5\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\B.png" />
     <Resource Include="Images\C.png" />
@@ -270,6 +277,23 @@
     <Resource Include="Assets\image1\Russia-Space-Advertisement4.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Assets\image1.1-1.5\logo1.jpg" />
+    <Resource Include="Assets\image1.1-1.5\logo2.jpg" />
+    <Resource Include="Assets\image1.1-1.5\logo3.jpg" />
+    <Resource Include="Assets\image1.1-1.5\logo4.jpg" />
+    <Resource Include="Assets\image1.1-1.5\logo7.jpg" />
+    <Resource Include="Assets\image1.1-1.5\logo8.jpg" />
+    <Resource Include="Assets\image1.1-1.5\roscosmo.jpg" />
+    <Resource Include="Assets\image1.1-1.5\roskosmos.jpg" />
+    <Resource Include="Assets\image1.1-1.5\russia_flag.png" />
+    <Resource Include="Assets\image1.1-1.5\Earth.png" />
+    <Resource Include="Assets\image1.1-1.5\Mercury.png" />
+    <Resource Include="Assets\image1.1-1.5\Venus.png" />
+    <Resource Include="Assets\image1.1-1.5\Mars.png" />
+    <Resource Include="Assets\image1.1-1.5\Jupiter.png" />
+    <Resource Include="Assets\image1.1-1.5\logo5.5.jpg" />
+    <Resource Include="Assets\image1.1-1.5\logo5.png" />
+    <Resource Include="Assets\image1.1-1.5\logo6.jpg" />
     <Content Include="Assets\Videos\open.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

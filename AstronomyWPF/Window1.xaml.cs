@@ -40,6 +40,11 @@ namespace AstronomyWPF
             ButtonOpenMenu.Visibility = Visibility.Visible;
         }
 
+        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
         private void SideMenuControl_SelectionChanged(object sender, EventArgs e)
         {
             switch (ListViewMenu.SelectedIndex)
