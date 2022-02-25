@@ -50,5 +50,8 @@
       <Name>AstronomyDP</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="json1.json" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

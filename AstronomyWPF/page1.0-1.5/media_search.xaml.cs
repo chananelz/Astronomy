@@ -24,5 +24,100 @@ namespace AstronomyWPF
         {
             InitializeComponent();
         }
+
+        private void GetEarthInfo(object sender, RoutedEventArgs e)
+        {
+            var BL = new AstronomyBL.InformationAboutPlanetFinder();
+
+            List <String>  urls = BL.Get_information_about_planet_finder("Earth");
+
+            photos1.Source = new BitmapImage(new Uri(urls[0]));
+            photos2.Source = new BitmapImage(new Uri(urls[1]));
+            photos3.Source = new BitmapImage(new Uri(urls[2]));
+            photos4.Source = new BitmapImage(new Uri(urls[3]));
+            photos5.Source = new BitmapImage(new Uri(urls[4]));
+            photos6.Source = new BitmapImage(new Uri(urls[5]));
+            photos7.Source = new BitmapImage(new Uri(urls[6]));
+            photos8.Source = new BitmapImage(new Uri(urls[7]));
+            photos9.Source = new BitmapImage(new Uri(urls[8]));
+
+
+
+        }
+
+        private void GetMercuryInfo(object sender, RoutedEventArgs e)
+        {
+            var BL = new AstronomyBL.InformationAboutPlanetFinder();
+
+            List<String> urls = BL.Get_information_about_planet_finder("Mercury");
+
+            photos1.Source = new BitmapImage(new Uri(urls[0]));
+            photos2.Source = new BitmapImage(new Uri(urls[1]));
+            photos3.Source = new BitmapImage(new Uri(urls[2]));
+            photos4.Source = new BitmapImage(new Uri(urls[3]));
+            photos5.Source = new BitmapImage(new Uri(urls[4]));
+            photos6.Source = new BitmapImage(new Uri(urls[5]));
+            photos7.Source = new BitmapImage(new Uri(urls[6]));
+            photos8.Source = new BitmapImage(new Uri(urls[7]));
+            photos9.Source = new BitmapImage(new Uri(urls[8]));
+
+        }
+
+        private void GetVenusInfo(object sender, RoutedEventArgs e)
+        {
+            var BL = new AstronomyBL.InformationAboutPlanetFinder();
+
+            List<String> urls = BL.Get_information_about_planet_finder("Venus");
+
+            photos1.Source = new BitmapImage(new Uri(urls[0]));
+            photos2.Source = new BitmapImage(new Uri(urls[1]));
+            photos3.Source = new BitmapImage(new Uri(urls[2]));
+            photos4.Source = new BitmapImage(new Uri(urls[3]));
+            photos5.Source = new BitmapImage(new Uri(urls[4]));
+            photos6.Source = new BitmapImage(new Uri(urls[5]));
+            photos7.Source = new BitmapImage(new Uri(urls[6]));
+            photos8.Source = new BitmapImage(new Uri(urls[7]));
+            photos9.Source = new BitmapImage(new Uri(urls[8]));
+
+
+
+        }
+
+        private void GetMarsInfo(object sender, RoutedEventArgs e)
+        {
+            var BL = new AstronomyBL.InformationAboutPlanetFinder();
+
+            List<String> urls = BL.Get_information_about_planet_finder("Mars");
+
+            photos1.Source = new BitmapImage(new Uri(urls[0]));
+            photos2.Source = new BitmapImage(new Uri(urls[1]));
+            photos3.Source = new BitmapImage(new Uri(urls[2]));
+            photos4.Source = new BitmapImage(new Uri(urls[3]));
+            photos5.Source = new BitmapImage(new Uri(urls[4]));
+            photos6.Source = new BitmapImage(new Uri(urls[5]));
+            photos7.Source = new BitmapImage(new Uri(urls[6]));
+            photos8.Source = new BitmapImage(new Uri(urls[7]));
+            photos9.Source = new BitmapImage(new Uri(urls[8]));
+        }
+
+        private void GetJupiterInfo(object sender, RoutedEventArgs e)
+        {
+            var BL = new AstronomyBL.InformationAboutPlanetFinder();
+
+            List<String> urls = BL.Get_information_about_planet_finder("Jupiter");
+
+            photos1.Source = new BitmapImage(new Uri(urls[0]));
+            photos2.Source = new BitmapImage(new Uri(urls[1]));
+            photos3.Source = new BitmapImage(new Uri(urls[2]));
+            photos4.Source = new BitmapImage(new Uri(urls[3]));
+            photos5.Source = new BitmapImage(new Uri(urls[4]));
+            photos6.Source = new BitmapImage(new Uri(urls[5]));
+            photos7.Source = new BitmapImage(new Uri(urls[6]));
+            photos8.Source = new BitmapImage(new Uri(urls[7]));
+            photos9.Source = new BitmapImage(new Uri(urls[8]));
+
+        }
+
+
     }
 }

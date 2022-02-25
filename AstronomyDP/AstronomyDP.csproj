@@ -41,7 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JsonClass\Collection.cs" />
+    <Compile Include="JsonClass\Datum.cs" />
+    <Compile Include="JsonClass\Item.cs" />
+    <Compile Include="JsonClass\Link.cs" />
+    <Compile Include="JsonClass\Metadata.cs" />
+    <Compile Include="JsonClass\RootPlanet.cs" />
     <Compile Include="Picture_of_the_day.cs" />
+    <Compile Include="Planet.cs" />
     <Compile Include="RootPictureOfTheDAY.cs" />
     <Compile Include="Star.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -43,7 +43,7 @@
                         </Ellipse.Fill>
                     </Ellipse>
                     <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Earth" FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
-                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1"/>
+                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1" Click="GetEarthInfo"/>
                 </Grid>
             </ListViewItem>
             <ListViewItem Height="50" Width="200">
@@ -58,7 +58,7 @@
                         </Ellipse.Fill>
                     </Ellipse>
                     <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Mercury " FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
-                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1"/>
+                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1" Click="GetMercuryInfo"/>
                 </Grid>
             </ListViewItem>
             <ListViewItem Height="50" Width="200">
@@ -73,7 +73,7 @@
                         </Ellipse.Fill>
                     </Ellipse>
                     <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Venus" FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
-                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1"/>
+                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1" Click="GetVenusInfo"/>
                 </Grid>
             </ListViewItem>
             <ListViewItem Height="50" Width="200">
@@ -88,7 +88,7 @@
                         </Ellipse.Fill>
                     </Ellipse>
                     <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Mars" FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
-                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1"/>
+                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1" Click="GetMarsInfo"/>
                 </Grid>
             </ListViewItem>
             <ListViewItem Height="50" Width="200">
@@ -103,7 +103,7 @@
                         </Ellipse.Fill>
                     </Ellipse>
                     <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Jupiter" FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
-                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1"/>
+                    <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1" Click="GetJupiterInfo"/>
                 </Grid>
             </ListViewItem>
         </ListView>
@@ -154,19 +154,19 @@
             <ScrollViewer Height="350" VerticalScrollBarVisibility="Hidden">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
-                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
-                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image x:Name="photos1" Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image x:Name="photos2" Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image x:Name="photos3" Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
-                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
-                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image x:Name="photos4" Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image x:Name="photos5" Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image x:Name="photos6" Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
-                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
-                        <Image Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image x:Name="photos7" Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image x:Name="photos8" Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
+                        <Image x:Name="photos9" Width="180" Height="200" Margin="10" Source="\Assets\image1.1-1.5\logo7.jpg" Stretch="UniformToFill"/>
                     </StackPanel>
                 </StackPanel>
             </ScrollViewer>
