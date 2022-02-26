@@ -87,7 +87,7 @@ namespace AstronomyWPF
         {
             var BL = new AstronomyBL.InformationAboutPlanetFinder();
 
-            List<String> urls = BL.Get_information_about_planet_finder("Mars");
+            List<String> urls = BL.Get_information_about_planet_finder("Neptune");
 
             photos1.Source = new BitmapImage(new Uri(urls[0]));
             photos2.Source = new BitmapImage(new Uri(urls[1]));
@@ -105,6 +105,24 @@ namespace AstronomyWPF
             var BL = new AstronomyBL.InformationAboutPlanetFinder();
 
             List<String> urls = BL.Get_information_about_planet_finder("Jupiter");
+
+            photos1.Source = new BitmapImage(new Uri(urls[0]));
+            photos2.Source = new BitmapImage(new Uri(urls[1]));
+            photos3.Source = new BitmapImage(new Uri(urls[2]));
+            photos4.Source = new BitmapImage(new Uri(urls[3]));
+            photos5.Source = new BitmapImage(new Uri(urls[4]));
+            photos6.Source = new BitmapImage(new Uri(urls[5]));
+            photos7.Source = new BitmapImage(new Uri(urls[6]));
+            photos8.Source = new BitmapImage(new Uri(urls[7]));
+            photos9.Source = new BitmapImage(new Uri(urls[8]));
+
+        }
+
+        private void GetGenerallPlanetInfo(object sender, RoutedEventArgs e)
+        {
+            var BL = new AstronomyBL.InformationAboutPlanetFinder();
+
+            List<String> urls = BL.Get_information_about_planet_finder(search_data.Text);
 
             photos1.Source = new BitmapImage(new Uri(urls[0]));
             photos2.Source = new BitmapImage(new Uri(urls[1]));

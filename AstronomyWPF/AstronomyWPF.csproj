@@ -294,6 +294,8 @@
     <Resource Include="Assets\image1.1-1.5\logo5.5.jpg" />
     <Resource Include="Assets\image1.1-1.5\logo5.png" />
     <Resource Include="Assets\image1.1-1.5\logo6.jpg" />
+    <Resource Include="Assets\image1.1-1.5\planet_searchn.png" />
+    <Resource Include="Assets\image1.1-1.5\Neptune.jpg" />
     <Content Include="Assets\Videos\open.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

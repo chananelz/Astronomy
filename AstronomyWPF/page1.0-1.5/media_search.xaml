@@ -26,9 +26,14 @@
 
             </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 80">
-            <TextBox Width="150" materialDesign:HintAssist.Hint="SEARCH" Foreground="White"/>
-            <materialDesign:PackIcon Kind="AccountSearch" Foreground="White" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 80" Height="25">
+            <TextBox x:Name="search_data" Width="150" materialDesign:HintAssist.Hint="SEARCH" Foreground="White"/>
+
+            <Button x:Name="eye_button" BorderBrush="{x:Null}" Click="GetGenerallPlanetInfo" Height="24" Background="#FF5B4779">
+                <Image Source="\Assets\image1.1-1.5\planet_searchn.png" VerticalAlignment="Top" Height="36" Width="30" Margin="0,-15,0,-20" />
+            </Button>
+
+
         </StackPanel>
         <ListView HorizontalAlignment="Right" Margin="0 250 0 0" >
             <ListViewItem Height="50" Width="200">
@@ -84,10 +89,10 @@
                     </Grid.ColumnDefinitions>
                     <Ellipse Width="30" Height="30" StrokeThickness="0.5" Stroke="White" HorizontalAlignment="Left">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="\Assets\image1.1-1.5\Mars.png" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="\Assets\image1.1-1.5\Neptune.jpg" Stretch="UniformToFill"/>
                         </Ellipse.Fill>
                     </Ellipse>
-                    <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Mars" FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+                    <TextBlock Width="150" HorizontalAlignment="Left"  Margin="35,0,0,0" Text="Neptune" FontSize="10" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
                     <Button HorizontalAlignment="Left" Content="search" FontSize="10" Margin="-10,5,0,5" Height="20" Padding="10 0" Grid.Column="1" Click="GetMarsInfo"/>
                 </Grid>
             </ListViewItem>
