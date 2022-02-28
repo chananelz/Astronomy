@@ -17,15 +17,19 @@ namespace AstronomyWPF
                 ListViewProducts.ItemsSource = products;
         }
 
-        private List<Star> GetProducts()
+        private List<Asteroid> GetProducts()
         {
-            return new List<Star>()
+            return new List<Asteroid>()
             {
-                new Star { Name = "ERETH", ObjectImage = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg" },
-                new Star { Name = "ERETH", ObjectImage = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg" },
-                new Star { Name = "ERETH", ObjectImage = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg" },
-                new Star { Name = "ERETH", ObjectImage = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg" }
+                new Asteroid { Name = "ERETH", ObjectImage = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg", ID = "2376848", AbsoluteMagnitude = "2" , diameterMin = "3" , diameterMax = "4" , EpochDate = "1.2.3.4" , IsPotentiallyHazardousAsteroid = "Yes" , IsSentryObject = "NO" , missDistance = "66" , ObjectUri = "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2363505&view=VOP", OrbitingBody = "qweqw0", Velocity = "100" }
             };
+        }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            Asteroid currentAstroid = ((Asteroid)button.DataContext);
+            sentry_current_astroid.Text = currentAstroid.diameterMin;
         }
     }
 }

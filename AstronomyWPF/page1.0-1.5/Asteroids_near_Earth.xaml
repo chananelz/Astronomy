@@ -50,8 +50,8 @@
                             </Grid>
                             <TextBlock Text="is potentially hazardous asteroid" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
-                                
-                                <TextBlock Text="YES" FontFamily="Champagne &amp; Limousines" Margin="0 5" Foreground="Gray" FontSize="20"/>
+
+                                <TextBlock x:Name="hazardous_current_astroid" Text="YES" FontFamily="Champagne &amp; Limousines" Margin="0 5" Foreground="Gray" FontSize="20"/>
                             </StackPanel>
 
                         </Grid>
@@ -69,10 +69,11 @@
                                 </Grid.Effect>
                                 <materialDesign:PackIcon Kind="InformationOutline" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
                             </Grid>
+                            
                             <TextBlock Text="orbiting_body" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
-
-                                <TextBlock Text="YES" FontFamily="Champagne &amp; Limousines" Margin="0 5" Foreground="Gray" FontSize="20"/>
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 20">
+                                <TextBlock x:Name="orbiting_body_current_astroid" Text="YES" FontFamily="Champagne &amp; Limousines" Margin="40 5" Foreground="Gray" FontSize="20"/>
+                                
                             </StackPanel>
 
                         </Grid>
@@ -93,8 +94,7 @@
                             </Grid>
                             <TextBlock Text="is sentry object" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
-
-                                <TextBlock Text="YES" FontFamily="Champagne &amp; Limousines" Margin="0 5" Foreground="Gray" FontSize="20"/>
+                                <TextBlock x:Name="sentry_current_astroid" Text="YES" FontFamily="Champagne &amp; Limousines" Margin="0 5" Foreground="Gray" FontSize="20"/>
                             </StackPanel>
                           
                         </Grid>
@@ -107,6 +107,7 @@
                             </Grid.OpacityMask>
                             <Border x:Name="BorderG1" CornerRadius="5" Background="White"/>
                             <StackPanel VerticalAlignment="Bottom" >
+                                <Button Content="Show more information about this astroid in browser" Width="400"/>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="10" Cursor="Hand">
                                     <materialDesign:PackIcon Kind="AlertOutline" Foreground="Red" Width="30" Height="30" VerticalAlignment="Center" Margin="5 0"/>
                                     <TextBlock Text="The information presented here is not unequivocal and may change from time to time. If necessary, update with the main system." FontSize="8" Foreground="#FF8522BD"/>
@@ -143,13 +144,13 @@
                                 <TextBlock Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Text="relative_velocity" FontSize="8" Foreground="#FF8522BD"/>
                                 <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Text="miss_distance" FontSize="8" Foreground="#FF8522BD"/>
                                                                         
-                                <TextBlock Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="id" FontSize="8" Foreground="#FF8522BD"/>
-                                <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Text="MAX " FontSize="8" Foreground="#FF8522BD"/>
-                                <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="MIN " FontSize="8" Foreground="#FF8522BD"/>
-                                <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="estimated_diameter - kilometers " FontSize="8" Foreground="#FF8522BD"/>
-                                <TextBlock Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Text="epoch date" FontSize="8" Foreground="#FF8522BD"/>
-                                <TextBlock Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Text="relative_velocity" FontSize="8" Foreground="#FF8522BD"/>
-                                <TextBlock Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Text="miss_distance" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock x:Name="id_current_astroid" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="id" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock x:Name="max_absolute_magnitude_current_astroid" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Text="MAX " FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock x:Name="min_absolute_magnitude_current_astroid" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="MIN " FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock x:Name="estimated_diameter_current_astroid" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="estimated_diameter - kilometers " FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock x:Name="epoch_date_current_astroid" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Text="epoch date" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock x:Name="relative_velocity_current_astroid" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Text="relative velocity" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock x:Name="miss_distance_current_astroid" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Text="miss distance" FontSize="8" Foreground="#FF8522BD"/>
                             </Grid>
 
                         </Grid>
@@ -197,7 +198,7 @@
                                                     <ImageBrush ImageSource="{Binding ObjectImage}"/>
                                                 </Border.Background>
                                             </Border>
-                                            <Button Margin="5 0" Content="{Binding Name}" FontSize="15"/>
+                                            <Button Margin="5 0" Content="{Binding Name}" FontSize="15" Click="Button_Click"/>
                                         </StackPanel>
                                     </Border>
                                 </DataTemplate>
