@@ -48,15 +48,12 @@
                                 </Grid.Effect>
                                 <materialDesign:PackIcon Kind="InformationOutline" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
                             </Grid>
-                            <TextBlock Text="Espaço Usado" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
+                            <TextBlock Text="is potentially hazardous asteroid" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
                                 
-                                <TextBlock Text="G55B" FontFamily="Champagne &amp; Limousines" Margin="0 5" Foreground="Gray" FontSize="20"/>
+                                <TextBlock Text="YES" FontFamily="Champagne &amp; Limousines" Margin="0 5" Foreground="Gray" FontSize="20"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="30" Cursor="Hand">
-                                <materialDesign:PackIcon Kind="AlertOutline" Foreground="Red" Width="10" Height="10" VerticalAlignment="Center" Margin="5 0"/>
-                                <TextBlock Text="Adquirir mais espaço" FontSize="8" Foreground="#FF8522BD"/>
-                            </StackPanel>
+
                         </Grid>
                     </Grid>
                     <Grid Grid.Column="2">
@@ -72,15 +69,12 @@
                                 </Grid.Effect>
                                 <materialDesign:PackIcon Kind="InformationOutline" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
                             </Grid>
-                            <TextBlock Text="Espaço Usado" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
+                            <TextBlock Text="orbiting_body" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
 
-                                <TextBlock Text="G55B" FontFamily="Champagne &amp; Limousines" Margin="0 5" Foreground="Gray" FontSize="20"/>
+                                <TextBlock Text="YES" FontFamily="Champagne &amp; Limousines" Margin="0 5" Foreground="Gray" FontSize="20"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="30" Cursor="Hand">
-                                <materialDesign:PackIcon Kind="AlertOutline" Foreground="Red" Width="10" Height="10" VerticalAlignment="Center" Margin="5 0"/>
-                                <TextBlock Text="Adquirir mais espaço" FontSize="8" Foreground="#FF8522BD"/>
-                            </StackPanel>
+
                         </Grid>
                     </Grid>
 
@@ -97,14 +91,12 @@
                                 </Grid.Effect>
                                 <materialDesign:PackIcon Kind="InformationOutline" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
                             </Grid>
-                            <TextBlock Text="Erros Corrigidos" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 30">
-                                <TextBlock Text="75" FontFamily="Champagne &amp; Limousines" VerticalAlignment="Center" Foreground="Gray" FontSize="40"/>
+                            <TextBlock Text="is sentry object" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
+
+                                <TextBlock Text="YES" FontFamily="Champagne &amp; Limousines" Margin="0 5" Foreground="Gray" FontSize="20"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="10" Cursor="Hand">
-                                <materialDesign:PackIcon Kind="AlertOutline" Foreground="Red" Width="10" Height="10" VerticalAlignment="Center" Margin="5 0"/>
-                                <TextBlock Text="Adquirir mais espaço" FontSize="8" Foreground="#FF8522BD"/>
-                            </StackPanel>
+                          
                         </Grid>
                     </Grid>
 
@@ -115,7 +107,11 @@
                             </Grid.OpacityMask>
                             <Border x:Name="BorderG1" CornerRadius="5" Background="White"/>
                             <StackPanel VerticalAlignment="Bottom" >
-                                
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="10" Cursor="Hand">
+                                    <materialDesign:PackIcon Kind="AlertOutline" Foreground="Red" Width="30" Height="30" VerticalAlignment="Center" Margin="5 0"/>
+                                    <TextBlock Text="The information presented here is not unequivocal and may change from time to time. If necessary, update with the main system." FontSize="8" Foreground="#FF8522BD"/>
+                                </StackPanel>
+
                             </StackPanel>
                         </Grid>
                         <Grid Margin="50 20 50 150">
@@ -123,16 +119,39 @@
                                 <VisualBrush Visual="{ Binding ElementName=BorderG2 }"/>
                             </Grid.OpacityMask>
                             <Border x:Name="BorderG2" CornerRadius="15" Background="#FF340051" />
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
 
-                            <MetroChart:RadialGaugeChart Background="{x:Null}" ChartTitle="More information about this asteroid:" ChartSubTitle="" Foreground="LightGray" VerticalAlignment="Top" >
-                                <MetroChart:RadialGaugeChart.Series>
-                                    <MetroChart:ChartSeries
-                                        DisplayMember="Titulo"
-                                        ItemsSource="{Binding Path=Consumo}"
-                                        SeriesTitle="Consumo"
-                                        ValueMember="Porcentagem" HorizontalAlignment="Center" />
-                                </MetroChart:RadialGaugeChart.Series>
-                            </MetroChart:RadialGaugeChart>
+                                <TextBlock  Grid.ColumnSpan="2"  Text="asteroid facts:" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="48" Foreground="#FF8522BD" />
+
+                                <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Name - id:" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Text="absolute magnitude" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Diameter (kilometers): " FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Text="epoch date" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Text="relative_velocity" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Text="miss_distance" FontSize="8" Foreground="#FF8522BD"/>
+                                                                        
+                                <TextBlock Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="id" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Text="MAX " FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="MIN " FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="estimated_diameter - kilometers " FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Text="epoch date" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Text="relative_velocity" FontSize="8" Foreground="#FF8522BD"/>
+                                <TextBlock Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Text="miss_distance" FontSize="8" Foreground="#FF8522BD"/>
+                            </Grid>
+
                         </Grid>
                     </Grid>
                 </Grid>
@@ -158,62 +177,40 @@
                 <Button  Margin="03" Background="#FF8522BD" BorderBrush="#FF8522BD" Height="79" Width="130">
                     <materialDesign:PackIcon  Kind="Server" Width="100" Height="70" />
                 </Button>
-                <TextBlock Text="Update information about&#x0a; asteroids from the server" Foreground="Gold" FontSize="16" FontFamily="Calisto MT"/>
+                <TextBlock Text="                  Update" Foreground="Gold" FontSize="16" Margin="8" FontFamily="Calisto MT"/>
             </StackPanel>
 
-            <StackPanel Grid.Row="1">
-                <TextBlock Text= "ASTEROIDS  CLOSEST TO EARTH :" 
-                               Foreground="Gray"
-                               FontSize="18"
-                               Margin="10,5,5,0" 
-                               VerticalAlignment="Stretch" 
-                               TextWrapping="Wrap"
-                                FontFamily="/Assets/font1.1-1.5/#Raleway"
-                               />
-
-
-                <Button Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
-                    <Grid Width="150">
-                        <materialDesign:PackIcon Kind="StarCircle" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="ID" FontFamily="Champagne &amp; Limousines"/>
-                    </Grid>
-                </Button>
-
-                <Button Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
-                    <Grid Width="150">
-                        <materialDesign:PackIcon Kind="StarCircle" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="ID" FontFamily="Champagne &amp; Limousines"/>
-                    </Grid>
-                </Button>
-
-                <Button Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
-                    <Grid Width="150">
-                        <materialDesign:PackIcon Kind="StarCircle" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="ID" FontFamily="Champagne &amp; Limousines"/>
-                    </Grid>
-                </Button>
-
-                <Button Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
-                    <Grid Width="150">
-                        <materialDesign:PackIcon Kind="StarCircle" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="ID" FontFamily="Champagne &amp; Limousines"/>
-                    </Grid>
-                </Button>
-
-                <Button Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
-                    <Grid Width="150">
-                        <materialDesign:PackIcon Kind="StarCircle" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="ID" FontFamily="Champagne &amp; Limousines"/>
-                    </Grid>
-                </Button>
-
-                <Button Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
-                    <Grid Width="150">
-                        <materialDesign:PackIcon Kind="StarCircle" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="ID" FontFamily="Champagne &amp; Limousines"/>
-                    </Grid>
-                </Button>
-            </StackPanel>
+            <ScrollViewer Grid.Row="1" Background="#FFF1F1F1">
+                <StackPanel>
+                    <TextBlock Text="Items" Margin="10" FontSize="22" FontWeight="Medium"/>
+                    <StackPanel Margin="20 0">
+                        <ItemsControl x:Name="ListViewProducts" ItemsSource="{Binding Product}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Margin="10" Width="110" Height="190">
+                                        <StackPanel>
+                                            <Border Width="100" Height="100" CornerRadius="5" Margin="5">
+                                                <Border.Effect>
+                                                    <DropShadowEffect ShadowDepth="1"/>
+                                                </Border.Effect>
+                                                <Border.Background>
+                                                    <ImageBrush ImageSource="{Binding ObjectImage}"/>
+                                                </Border.Background>
+                                            </Border>
+                                            <Button Margin="5 0" Content="{Binding Name}" FontSize="15"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
 
         <Grid  Grid.ColumnSpan="2" Background="#FF8522BD" >

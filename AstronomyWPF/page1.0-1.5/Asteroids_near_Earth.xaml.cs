@@ -1,17 +1,6 @@
-﻿using System;
+﻿using AstronomyDP;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AstronomyWPF
 {
@@ -23,35 +12,20 @@ namespace AstronomyWPF
         public Asteroids_near_Earth()
         {
             InitializeComponent();
+            var products = GetProducts();
+            if (products.Count > 0)
+                ListViewProducts.ItemsSource = products;
         }
 
+        private List<Star> GetProducts()
+        {
+            return new List<Star>()
+            {
+                new Star { Name = "ERETH", ObjectImage = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg" },
+                new Star { Name = "ERETH", ObjectImage = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg" },
+                new Star { Name = "ERETH", ObjectImage = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg" },
+                new Star { Name = "ERETH", ObjectImage = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg" }
+            };
+        }
     }
-
-    //internal class ConsumoViewModel
-    //{
-    //    public List<Consumo> Consumo { get; private set; }
-
-    //    public ConsumoViewModel(Consumo consumo)
-    //    {
-    //        Consumo = new List<Consumo>();
-    //        Consumo.Add(consumo);
-    //    }
-    //}
-
-    //internal class Consumo
-    //{
-    //    public string Titulo { get; private set; }
-    //    public int Porcentagem { get; private set; }
-
-    //    public Consumo()
-    //    {
-    //        Titulo = "DNGERS";
-    //        Porcentagem = CalcularPorcentagem();
-    //    }
-
-    //    private int CalcularPorcentagem()
-    //    {
-    //        return 47; //Calculo da porcentagem de consumo
-    //    }
-    //}
 }

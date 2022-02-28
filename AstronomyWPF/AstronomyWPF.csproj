@@ -303,6 +303,21 @@
     <Resource Include="Assets\image1.1-1.5\logo6.jpg" />
     <Resource Include="Assets\image1.1-1.5\planet_searchn.png" />
     <Resource Include="Assets\image1.1-1.5\Neptune.jpg" />
+    <Resource Include="Assets\Asteroids\1.jpg" />
+    <Resource Include="Assets\Asteroids\10.jpg" />
+    <Resource Include="Assets\Asteroids\11.jpg" />
+    <Resource Include="Assets\Asteroids\12.jpg" />
+    <Resource Include="Assets\Asteroids\13.jpg" />
+    <Resource Include="Assets\Asteroids\14.jpg" />
+    <Resource Include="Assets\Asteroids\15.jpg" />
+    <Resource Include="Assets\Asteroids\2.jpg" />
+    <Resource Include="Assets\Asteroids\3.jpg" />
+    <Resource Include="Assets\Asteroids\4.jpg" />
+    <Resource Include="Assets\Asteroids\5.jpg" />
+    <Resource Include="Assets\Asteroids\6.jpg" />
+    <Resource Include="Assets\Asteroids\7.jpg" />
+    <Resource Include="Assets\Asteroids\8.jpg" />
+    <Resource Include="Assets\Asteroids\9.jpg" />
     <Content Include="Assets\Videos\open.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
