@@ -72,6 +72,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="page1.0-1.5\AI_Asteroide.xaml.cs">
+      <DependentUpon>AI_Asteroide.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\ViewModels\Commands\PlanetsProfilesCommands.cs" />
     <Compile Include="MVVM\ViewModels\EarthViewModel.cs" />
     <Compile Include="MVVM\ViewModels\JupiterViewModel.cs" />
@@ -134,6 +137,10 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
+    <Page Include="page1.0-1.5\AI_Asteroide.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Assets\core1.1-1.5\Planet_Profiles_Theme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

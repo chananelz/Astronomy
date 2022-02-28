@@ -64,6 +64,9 @@ namespace AstronomyWPF
                 case 4:
                     frame.Navigate(new Uri(@"page1.0-1.5\Asteroids_near_Earth.xaml", UriKind.RelativeOrAbsolute));
                     break;
+                case 5:
+                    frame.Navigate(new Uri(@"page1.0-1.5\AI_Asteroide.xaml", UriKind.RelativeOrAbsolute));
+                    break;
 
             }
         }

@@ -22,48 +22,36 @@ namespace AstronomyWPF
     {
         public Asteroids_near_Earth()
         {
-            Consumo consumo = new Consumo();
-            DataContext = new ConsumoViewModel(consumo);
+            InitializeComponent();
         }
-
-        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void GridBarraTitulo_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
-
 
     }
 
-    internal class ConsumoViewModel
-    {
-        public List<Consumo> Consumo { get; private set; }
+    //internal class ConsumoViewModel
+    //{
+    //    public List<Consumo> Consumo { get; private set; }
 
-        public ConsumoViewModel(Consumo consumo)
-        {
-            Consumo = new List<Consumo>();
-            Consumo.Add(consumo);
-        }
-    }
+    //    public ConsumoViewModel(Consumo consumo)
+    //    {
+    //        Consumo = new List<Consumo>();
+    //        Consumo.Add(consumo);
+    //    }
+    //}
 
-    internal class Consumo
-    {
-        public string Titulo { get; private set; }
-        public int Porcentagem { get; private set; }
+    //internal class Consumo
+    //{
+    //    public string Titulo { get; private set; }
+    //    public int Porcentagem { get; private set; }
 
-        public Consumo()
-        {
-            Titulo = "Consumo Atual";
-            Porcentagem = CalcularPorcentagem();
-        }
+    //    public Consumo()
+    //    {
+    //        Titulo = "DNGERS";
+    //        Porcentagem = CalcularPorcentagem();
+    //    }
 
-        private int CalcularPorcentagem()
-        {
-            return 47; //Calculo da porcentagem de consumo
-        }
-    }
+    //    private int CalcularPorcentagem()
+    //    {
+    //        return 47; //Calculo da porcentagem de consumo
+    //    }
+    //}
 }

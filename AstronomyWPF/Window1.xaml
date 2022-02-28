@@ -93,6 +93,12 @@
                             <TextBlock Text="Asteroids near Earth" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Meteor" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="New Asteroids" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
                 </ListView>
             </StackPanel>
         </Grid>

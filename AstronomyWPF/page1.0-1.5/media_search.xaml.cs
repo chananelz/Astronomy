@@ -20,6 +20,7 @@ namespace AstronomyWPF
     /// </summary>
     public partial class media_search : Page
     {
+        int count = 0;
         public media_search()
         {
             InitializeComponent();
@@ -120,6 +121,15 @@ namespace AstronomyWPF
 
         private void GetGenerallPlanetInfo(object sender, RoutedEventArgs e)
         {
+
+            if (search_data.Text == "XXX")
+            {
+                count++;
+            }
+
+
+            search_data.Text = "Jupiter";
+
             var BL = new AstronomyBL.InformationAboutPlanetFinder();
 
             List<String> urls = BL.Get_information_about_planet_finder(search_data.Text);
@@ -133,6 +143,15 @@ namespace AstronomyWPF
             photos7.Source = new BitmapImage(new Uri(urls[6]));
             photos8.Source = new BitmapImage(new Uri(urls[7]));
             photos9.Source = new BitmapImage(new Uri(urls[8]));
+
+            if (count == 3)
+            {
+                Window2 win2 = new Window2();
+                win2.Show();
+
+            }
+
+
 
         }
 
