@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,10 +62,51 @@ namespace AstronomyBL
                     IsSentryObject = item.IsSentryObject.ToString(),
                     missDistance = item.MissDistance, ObjectUri = "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=" + item.NeoReferenceId + "&view=VOP", OrbitingBody = item.orbiting_body, Velocity = item.Velocity });
             }
-
-
             return AllAsteroids;
-
         }
+
+        public List<Asteroid> GetAsteroids_by_risk(string selected_risk)
+        {
+            string risk = "True";
+
+            if (selected_risk == "No")
+            {
+                risk = "False";
+            }
+
+            List<Asteroid> allAsteroids = GetAsteroids();
+            
+
+            var Result = (from asteroid in allAsteroids
+                          where asteroid.IsPotentiallyHazardousAsteroid == risk
+                          select asteroid
+                          ).ToList<Asteroid>();
+            return Result;
+        }
+
+        public List<Asteroid> GetAsteroids_by_Diameter(float min_Diameter)
+        {
+            List<Asteroid> allAsteroids = GetAsteroids();
+
+            var Result = (from asteroid in allAsteroids
+                          where (float)Convert.ToDouble(asteroid.diameterMax.Split(' ')[2]) >= min_Diameter
+                          select asteroid
+              ).ToList<Asteroid>();
+            return Result;
+        }
+
+        public List<Asteroid> GetAsteroids_by_day(string Date)
+        {
+            List<Asteroid> allAsteroids = GetAsteroids();
+
+            var Result = (from asteroid in allAsteroids
+                          where asteroid.EpochDate == Date
+                          select asteroid
+                          ).ToList<Asteroid>();
+            return Result;
+        }
+
+
+
     }
 }

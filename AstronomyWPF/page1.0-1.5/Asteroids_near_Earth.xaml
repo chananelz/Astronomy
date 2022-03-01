@@ -183,19 +183,22 @@
 
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Date" Foreground="Orange" FontSize="14" Margin="3" FontFamily="Calisto MT"/>
-                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#7b1fa2" BorderBrush="#FFE05959" Margin="110,5,0,0" Width="47" Height="26">
+                        <DatePicker Name="calendar_picker"  IsTodayHighlighted="True" SelectedDateFormat="Short" Visibility="Visible" Margin="30,0,0,0" />
+                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#7b1fa2" BorderBrush="#FFE05959" Margin="0,5,0,0" Width="47" Height="26" Click="Select_By_Date">
                             <materialDesign:PackIcon Kind="Send" VerticalAlignment="Center" Foreground="White"/>
                         </Button>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="risky asteroids" Foreground="Orange" FontSize="14" Margin="3" FontFamily="Calisto MT"/>
-                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#7b1fa2" BorderBrush="#FFE05959" Margin="55,5,0,0" Width="47" Height="26">
+                        <TextBox x:Name="search_risky" Width="46" materialDesign:HintAssist.Hint=" Yes/No" Foreground="White"/>
+                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#7b1fa2" BorderBrush="#FFE05959" Margin="10,5,0,0" Width="47" Height="26" Click="Select_By_Risk">
                             <materialDesign:PackIcon Kind="Send" VerticalAlignment="Center" Foreground="White"/>
                         </Button>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Diameter above" Foreground="Orange" FontSize="14" Margin="3" FontFamily="Calisto MT"/>
-                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#7b1fa2" BorderBrush="#FFE05959" Margin="45,5,0,0" Width="47" Height="26">
+                        <TextBox x:Name="search_diameter" Width="45" materialDesign:HintAssist.Hint="number" Foreground="White"/>
+                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#7b1fa2" BorderBrush="#FFE05959" Margin="1,5,0,0" Width="47" Height="26" Click="Select_By_Diameter">
                             <materialDesign:PackIcon Kind="Send" VerticalAlignment="Center" Foreground="White"/>
                         </Button>
                     </StackPanel>

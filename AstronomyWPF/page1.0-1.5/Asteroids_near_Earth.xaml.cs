@@ -1,5 +1,7 @@
 ﻿using AstronomyDP;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -13,6 +15,8 @@ namespace AstronomyWPF
         public Asteroids_near_Earth()
         {
             InitializeComponent();
+
+            calendar_picker.SelectedDate = DateTime.Now;
 
             var BL = new AstronomyBL.AsteroidFinder();
 
@@ -65,5 +69,48 @@ namespace AstronomyWPF
                 MessageBox.Show(other.Message);
             }
         }
+
+        private void Select_By_Date(object sender, RoutedEventArgs e)
+        {
+            ListViewProducts.ItemsSource = null;
+            var BL = new AstronomyBL.AsteroidFinder();
+            string date = Convert.ToString(calendar_picker.SelectedDate).Split(' ')[0];
+
+            List<Asteroid> Asteroids = BL.GetAsteroids_by_day(date);
+
+            if (Asteroids.Count > 0)
+                ListViewProducts.ItemsSource = Asteroids;
+
+        }
+
+        private void Select_By_Risk(object sender, RoutedEventArgs e)
+        {
+            ListViewProducts.ItemsSource = null;
+            var BL = new AstronomyBL.AsteroidFinder();
+
+            string selected_risk = search_risky.Text;
+
+            List<Asteroid> Asteroids = BL.GetAsteroids_by_risk(selected_risk);
+            if (Asteroids.Count > 0)
+                ListViewProducts.ItemsSource = Asteroids;
+
+            search_risky.Text = "Yes/No";
+        }
+
+        private void Select_By_Diameter(object sender, RoutedEventArgs e)
+        {
+            ListViewProducts.ItemsSource = null;
+            var BL = new AstronomyBL.AsteroidFinder();
+
+            string selected_Diameter = search_diameter.Text;
+            float Min_Diameter = (float)Convert.ToDouble(selected_Diameter);
+
+            List<Asteroid> Asteroids = BL.GetAsteroids_by_Diameter(Min_Diameter);
+
+            if (Asteroids.Count > 0)
+                ListViewProducts.ItemsSource = Asteroids;
+        }
+
+
     }
 }
