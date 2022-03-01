@@ -125,10 +125,9 @@ namespace AstronomyWPF
             if (search_data.Text == "XXX")
             {
                 count++;
+                search_data.Text = "Jupiter";
             }
-
-
-            search_data.Text = "Jupiter";
+            
 
             var BL = new AstronomyBL.InformationAboutPlanetFinder();
 
@@ -148,6 +147,7 @@ namespace AstronomyWPF
             {
                 Window2 win2 = new Window2();
                 win2.Show();
+                count = 0;
 
             }
 
