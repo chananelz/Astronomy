@@ -144,8 +144,8 @@
                                 <TextBlock Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="absolute magnitude" FontSize="15" Foreground="Ivory"/>
                                 <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Diameter (kilometers): " FontSize="15" Foreground="Ivory"/>
                                 <TextBlock Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Text="epoch date" FontSize="15" Foreground="Ivory"/>
-                                <TextBlock Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Relative velocity" FontSize="15" Foreground="Ivory"/>
-                                <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Miss distance" FontSize="15" Foreground="Ivory"/>
+                                <TextBlock Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Relative velocity (kilometers - hour)" FontSize="15" Foreground="Ivory"/>
+                                <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Miss distance (kilometers)" FontSize="15" Foreground="Ivory"/>
                                 
                                 <TextBlock x:Name="id_current_astroid" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="id" FontSize="15" Foreground="Ivory"/>
                                 <TextBlock x:Name="max_diameter_current_astroid" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Text="Max " FontSize="15" Foreground="Ivory" Margin="0,12,100,0"/>
@@ -201,7 +201,7 @@
                                                     <ImageBrush ImageSource="{Binding ObjectImage}"/>
                                                 </Border.Background>
                                             </Border>
-                                            <Button Margin="5 0" Content="{Binding Name}" FontSize="15" Click="Button_Click"/>
+                                            <Button Margin="5 0" Content="{Binding Name}" FontSize="10" Click="Choose_an_asteroid"/>
                                         </StackPanel>
                                     </Border>
                                 </DataTemplate>

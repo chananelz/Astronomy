@@ -29,7 +29,7 @@ namespace AstronomyWPF
         //    };
         //}
 
-        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void Choose_an_asteroid(object sender, System.Windows.RoutedEventArgs e)
         {
             var button = sender as Button;
             Asteroid currentAstroid = ((Asteroid)button.DataContext);
