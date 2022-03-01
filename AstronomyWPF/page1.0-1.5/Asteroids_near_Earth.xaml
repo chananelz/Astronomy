@@ -178,10 +178,28 @@
             </Grid.Effect>
 
             <StackPanel Background="#FFA46FE4">
-                <Button  Margin="03" Background="#FF8522BD" BorderBrush="#FF8522BD" Height="79" Width="130">
-                    <materialDesign:PackIcon  Kind="Server" Width="100" Height="70" />
-                </Button>
-                <TextBlock Text="                  Update" Foreground="Gold" FontSize="16" Margin="8" FontFamily="Calisto MT"/>
+                <StackPanel Background="#FFA46FE4">
+                    <TextBlock Text="Show items by selection:" Foreground="Gold" FontSize="18" Margin="3" FontFamily="Calisto MT"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Date" Foreground="Orange" FontSize="14" Margin="3" FontFamily="Calisto MT"/>
+                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#7b1fa2" BorderBrush="#FFE05959" Margin="110,5,0,0" Width="47" Height="26">
+                            <materialDesign:PackIcon Kind="Send" VerticalAlignment="Center" Foreground="White"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="risky asteroids" Foreground="Orange" FontSize="14" Margin="3" FontFamily="Calisto MT"/>
+                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#7b1fa2" BorderBrush="#FFE05959" Margin="55,5,0,0" Width="47" Height="26">
+                            <materialDesign:PackIcon Kind="Send" VerticalAlignment="Center" Foreground="White"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Diameter above" Foreground="Orange" FontSize="14" Margin="3" FontFamily="Calisto MT"/>
+                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#7b1fa2" BorderBrush="#FFE05959" Margin="45,5,0,0" Width="47" Height="26">
+                            <materialDesign:PackIcon Kind="Send" VerticalAlignment="Center" Foreground="White"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
 
             <ScrollViewer Grid.Row="1" Background="#FFF1F1F1">
