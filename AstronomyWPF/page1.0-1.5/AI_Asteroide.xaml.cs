@@ -23,12 +23,29 @@ namespace AstronomyWPF
         public AI_Asteroide()
         {
             InitializeComponent();
-            Consumo consumo = new Consumo();
+            Consumo consumo = new Consumo(47);
             DataContext = new ConsumoViewModel(consumo);
+        }
+
+        private void Calculate_the_Risk(object sender, RoutedEventArgs e)
+        {
+            double my_absoluteMagnitude = Convert.ToDouble(AbsoluteMagnitude.Text);
+            double my_diameterMin = Convert.ToDouble(diameterMin.Text);
+            double my_diameterMax = Convert.ToDouble(diameterMax.Text);
+            double my_velocity = Convert.ToDouble(Velocity.Text);
+            double my_missDistance = Convert.ToDouble(missDistance.Text);
+
+            var BL = new AstronomyBL.Weighted_k_NN();
+            double result = BL.getPercentageOfRisk(my_absoluteMagnitude, my_diameterMin, my_diameterMax, my_velocity, my_missDistance);
+
+            Consumo my_consumo = new Consumo(result * 100);
+            DataContext = new ConsumoViewModel(my_consumo);
+            radial_chart.Visibility = Visibility.Visible;
+
         }
     }
 
-    internal class ConsumoViewModel
+    public class ConsumoViewModel
     {
         public List<Consumo> Consumo { get; private set; }
 
@@ -39,20 +56,20 @@ namespace AstronomyWPF
         }
     }
 
-    internal class Consumo
+    public class Consumo
     {
         public string Titulo { get; private set; }
-        public int Porcentagem { get; private set; }
+        public double Porcentagem { get; private set; }
 
-        public Consumo()
+        public Consumo(double num)
         {
-            Titulo = "DNGERS";
-            Porcentagem = CalcularPorcentagem();
+            Titulo = "Dangerous Asteroide";
+            Porcentagem = CalcularPorcentagem(num);
         }
 
-        private int CalcularPorcentagem()
+        public double CalcularPorcentagem(double num)
         {
-            return 47; //Calculo da porcentagem de consumo
+            return num; //Calculo da porcentagem de consumo
         }
     }
 }

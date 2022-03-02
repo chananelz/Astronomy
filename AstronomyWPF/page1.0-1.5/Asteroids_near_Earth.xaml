@@ -51,7 +51,7 @@
                             <TextBlock Text="is potentially&#10;hazardous asteroid" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="Gray"/>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
 
-                                <TextBlock x:Name="hazardous_current_astroid" Text="YES" FontFamily="Champagne &amp; Limousines" Margin="0 15" Foreground="Gray" FontSize="20"/>
+                                <TextBlock x:Name="hazardous_current_astroid" Text="" FontFamily="Champagne &amp; Limousines" Margin="0 15" Foreground="Gray" FontSize="20"/>
                             </StackPanel>
 
                         </Grid>
@@ -72,7 +72,7 @@
 
                             <TextBlock Text="orbiting_body" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
                             <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 20">
-                                <TextBlock x:Name="orbiting_body_current_astroid" Text="YES" FontFamily="Champagne &amp; Limousines" Margin="40 15" Foreground="Gray" FontSize="20"/>
+                                <TextBlock x:Name="orbiting_body_current_astroid" Text="" FontFamily="Champagne &amp; Limousines" Margin="40 15" Foreground="Gray" FontSize="20"/>
 
                             </StackPanel>
 
@@ -94,7 +94,7 @@
                             </Grid>
                             <TextBlock Text="is sentry object" HorizontalAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="5" VerticalAlignment="Top" Foreground="Gray"/>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
-                                <TextBlock x:Name="sentry_current_astroid" Text="YES" FontFamily="Champagne &amp; Limousines" Margin="0 15" Foreground="Gray" FontSize="20"/>
+                                <TextBlock x:Name="sentry_current_astroid" Text="" FontFamily="Champagne &amp; Limousines" Margin="0 15" Foreground="Gray" FontSize="20"/>
                             </StackPanel>
 
                         </Grid>
