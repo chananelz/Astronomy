@@ -120,14 +120,12 @@
     <Compile Include="page1.0-1.5\media_search.xaml.cs">
       <DependentUpon>media_search.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVVM\Models\StarModel.cs" />
     <Compile Include="page1.0-1.5\Picture_of_the_Day.xaml.cs">
       <DependentUpon>Picture_of_the_Day.xaml</DependentUpon>
     </Compile>
     <Compile Include="page1.0-1.5\Planet_Profiles.xaml.cs">
       <DependentUpon>Planet_Profiles.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVVM\ViewModels\Commands\AddCommand.cs" />
     <Compile Include="Window0.xaml.cs">
       <DependentUpon>Window0.xaml</DependentUpon>
     </Compile>
@@ -185,17 +183,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MVVM\ViewModels\StarVeiwModels.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="page1.0-1.5\media_search.xaml">
@@ -262,7 +251,9 @@
       <Name>AstronomyDP</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="MVVM\Models\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\B.png" />
     <Resource Include="Images\C.png" />
@@ -353,6 +344,8 @@
     <Resource Include="Assets\Asteroids\48.jpg" />
     <Resource Include="Assets\Asteroids\49.jpg" />
     <Resource Include="Assets\Asteroids\50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Assets\Videos\open.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

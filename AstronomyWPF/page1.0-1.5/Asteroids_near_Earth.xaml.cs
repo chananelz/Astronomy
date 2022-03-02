@@ -25,13 +25,7 @@ namespace AstronomyWPF
                 ListViewProducts.ItemsSource = asteroids;
         }
 
-        //private List<Asteroid> GetAsteroids()
-        //{
-        //    return new List<Asteroid>()
-        //    {
-        //        new Asteroid { Name = "ERETH", ObjectImage = @"C:\AstronomyProject\AstronomyWPF\Images\A.jpg", ID = "2376848", AbsoluteMagnitude = "2" , diameterMin = "3" , diameterMax = "4" , EpochDate = "1.2.3.4" , IsPotentiallyHazardousAsteroid = "1Yes" , IsSentryObject = "NO" , missDistance = "66" , ObjectUri = "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2363505&view=VOP", OrbitingBody = "qweqw0", Velocity = "100" }
-        //    };
-        //}
+
 
         private void Choose_an_asteroid(object sender, System.Windows.RoutedEventArgs e)
         {
