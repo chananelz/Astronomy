@@ -23,5 +23,11 @@ namespace AstronomyWPF
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var BL = new AstronomyBL.UserValidation();
+            bool result = BL.ValidateUser("eli", "1");
+        }
     }
 }
