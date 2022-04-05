@@ -40,6 +40,11 @@ namespace AstronomyWPF
             ButtonOpenMenu.Visibility = Visibility.Visible;
         }
 
+        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
         private void SideMenuControl_SelectionChanged(object sender, EventArgs e)
         {
             switch (ListViewMenu.SelectedIndex)
@@ -58,6 +63,9 @@ namespace AstronomyWPF
                     break;
                 case 4:
                     frame.Navigate(new Uri(@"page1.0-1.5\Asteroids_near_Earth.xaml", UriKind.RelativeOrAbsolute));
+                    break;
+                case 5:
+                    frame.Navigate(new Uri(@"page1.0-1.5\AI_Asteroide.xaml", UriKind.RelativeOrAbsolute));
                     break;
 
             }

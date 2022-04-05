@@ -47,6 +47,9 @@
                         <Button Content="Logout"/>
                     </StackPanel>
                 </materialDesign:PopupBox>
+                <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="45" Height="45" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="ButtonFechar_Click">
+                    <materialDesign:PackIcon Kind="Power"/>
+                </Button>
             </StackPanel>
         </Grid>
         <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" Background="{DynamicResource my_deep_blue}">
@@ -88,6 +91,12 @@
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="AlertOutline" Height="25" Width="25" Margin="10"/>
                             <TextBlock Text="Asteroids near Earth" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Meteor" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="New Asteroids" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
