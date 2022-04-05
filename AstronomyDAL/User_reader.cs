@@ -21,10 +21,15 @@ namespace AstronomyDAL
 
         }
 
-        public bool AddNewUser(Users user)
+        public void AddNewUser(Users user)
         {
             UsersDetails.Add(user);
-            return true;
+            using (APDBEntities context = new APDBEntities())
+            {
+                context.Users.Add(user);
+                context.SaveChanges();
+            }
+
         }
     }
 }

@@ -4,7 +4,30 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="APDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="APDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PictureOfTheDay">
+          <Key>
+            <PropertyRef Name="Url" />
+          </Key>
+          <Property Name="Url" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Date" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Classification" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Star">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ObjectUri" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AbsoluteMagnitude" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="diameterAvrege" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsPotentiallyHazardousAsteroid" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Velocity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="missDistance" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OrbitingBody" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsSentryObject" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="UserName" />
@@ -15,10 +38,11 @@
           <Property Name="IsIntrestedInEmails" Type="bit" />
         </EntityType>
         <EntityContainer Name="APDBModelStoreContainer">
+          <EntitySet Name="PictureOfTheDay" EntityType="Self.PictureOfTheDay" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Star" EntityType="Self.Star" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="APDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -33,7 +57,32 @@
         </EntityType>
         <EntityContainer Name="APDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="Star" EntityType="APDBModel.Star" />
+          <EntitySet Name="PictureOfTheDay" EntityType="APDBModel.PictureOfTheDay" />
         </EntityContainer>
+        <EntityType Name="Star">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ObjectUri" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbsoluteMagnitude" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="diameterAvrege" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsPotentiallyHazardousAsteroid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Velocity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="missDistance" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrbitingBody" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsSentryObject" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PictureOfTheDay">
+          <Key>
+            <PropertyRef Name="Url" />
+          </Key>
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Classification" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -47,6 +96,31 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
                 <ScalarProperty Name="IsIntrestedInEmails" ColumnName="IsIntrestedInEmails" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Star">
+            <EntityTypeMapping TypeName="APDBModel.Star">
+              <MappingFragment StoreEntitySet="Star">
+                <ScalarProperty Name="IsSentryObject" ColumnName="IsSentryObject" />
+                <ScalarProperty Name="OrbitingBody" ColumnName="OrbitingBody" />
+                <ScalarProperty Name="missDistance" ColumnName="missDistance" />
+                <ScalarProperty Name="Velocity" ColumnName="Velocity" />
+                <ScalarProperty Name="IsPotentiallyHazardousAsteroid" ColumnName="IsPotentiallyHazardousAsteroid" />
+                <ScalarProperty Name="diameterAvrege" ColumnName="diameterAvrege" />
+                <ScalarProperty Name="AbsoluteMagnitude" ColumnName="AbsoluteMagnitude" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ObjectUri" ColumnName="ObjectUri" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PictureOfTheDay">
+            <EntityTypeMapping TypeName="APDBModel.PictureOfTheDay">
+              <MappingFragment StoreEntitySet="PictureOfTheDay">
+                <ScalarProperty Name="Classification" ColumnName="Classification" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

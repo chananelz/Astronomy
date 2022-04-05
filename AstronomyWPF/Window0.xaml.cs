@@ -24,10 +24,16 @@ namespace AstronomyWPF
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void getlogin(object sender, RoutedEventArgs e)
         {
             var BL = new AstronomyBL.UserValidation();
-            bool result = BL.ValidateUser("eli", "1");
+            bool result = BL.ValidateUser("eli", "123");
+        }
+
+        private void get_sing_up(object sender, RoutedEventArgs e)
+        {
+            var BL = new AstronomyBL.UserValidation();
+            bool result = BL.Sign_up_request("dan","123456789","ch@gmail",true);
         }
     }
 }

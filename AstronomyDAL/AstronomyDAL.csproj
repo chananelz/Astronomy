@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Firebase_reader.cs" />
     <Compile Include="ModelAPDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -68,8 +69,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAPDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="PictureOfTheDay.cs">
+      <DependentUpon>ModelAPDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Picture_of_the_day_reader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Star.cs">
+      <DependentUpon>ModelAPDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>ModelAPDB.tt</DependentUpon>
     </Compile>

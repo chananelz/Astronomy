@@ -25,7 +25,7 @@
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"  Foreground="{DynamicResource ValidationErrorBrush}"  > <Run Text="The system is for space scientists only"/></TextBlock>
             <StackPanel Orientation="Horizontal" >
                 <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"  > <Run Text="Don't have an account?  "/></TextBlock>
-                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#FF2468AC"> <Run Text="Create an account"/></TextBlock>
+                <Button VerticalAlignment="Top"  Foreground="#FF2468AC" Click="get_sing_up" Height="18" Content="Create an account" ></Button>
             </StackPanel>
             <StackPanel Margin="0,15" Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
@@ -39,7 +39,7 @@
                 <CheckBox Content="Remember me" Margin="5,10" Foreground="#707070"/>
                 <Label Content="I forgot my password" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="130,0,0,0" Foreground="#707070"/>
             </Grid>
-            <Button HorizontalAlignment="Center"  Margin="0,10,40,0" Content="LOGIN" FontFamily="Impact" FontSize="18" Width="100" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" BorderBrush="#FF307CD6" Click="Button_Click"/>
+            <Button HorizontalAlignment="Center"  Margin="0,10,40,0" Content="LOGIN" FontFamily="Impact" FontSize="18" Width="100" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" BorderBrush="#FF307CD6" Click="getlogin"/>
             <StackPanel Orientation="Horizontal" Margin="10,35">
                 <Label Content="Sign in with" Foreground="#707070" VerticalAlignment="Center"/>
                 <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}">
