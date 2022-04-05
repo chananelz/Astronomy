@@ -1,12 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\AstronomyBL",
+    "\\AstronomyDAL",
+    "\\AstronomyDP",
     "\\AstronomyWPF",
-    "\\AstronomyWPF\\converter",
-    "\\AstronomyWPF\\Images",
-    "\\AstronomyWPF\\Models",
-    "\\AstronomyWPF\\ViewModels"
+    "\\AstronomyWPF\\Images"
   ],
-  "SelectedNode": "\\AstronomyWPF\\converter\\DetailsToStarConverter.cs",
+  "SelectedNode": "\\AstronomyBL",
   "PreviewInSolutionExplorer": false
 }

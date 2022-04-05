@@ -78,6 +78,7 @@
   <ItemGroup>
     <Compile Include="PictureOfTheDayFinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserValidation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AstronomyDAL\AstronomyDAL.csproj">

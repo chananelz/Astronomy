@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AstronomyDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AstronomyDB.dbo.PictureOfTheDay' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PictureOfTheDay">
+          <Key>
+            <PropertyRef Name="Url" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Classification" />
+          </Key>
+          <Property Name="Url" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Classification" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AstronomyDB.dbo.Star' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Star">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="ObjectUri" />
+          </Key>
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ObjectUri" Type="varchar(max)" Nullable="false" />
+          <Property Name="Id" Type="varchar" MaxLength="50" />
+          <Property Name="AbsoluteMagnitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="diameterAvrege" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsPotentiallyHazardousAsteroid" Type="nvarchar" MaxLength="50" />
+          <Property Name="Velocity" Type="nvarchar" MaxLength="50" />
+          <Property Name="missDistance" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrbitingBody" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsSentryObject" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsIntrestedInEmails" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="AstronomyDBModelStoreContainer">
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PictureOfTheDay" EntityType="Self.PictureOfTheDay" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PictureOfTheDay].[Url] AS [Url], 
+    [PictureOfTheDay].[Date] AS [Date], 
+    [PictureOfTheDay].[Classification] AS [Classification]
+    FROM [dbo].[PictureOfTheDay] AS [PictureOfTheDay]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Star" EntityType="Self.Star" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Star].[Name] AS [Name], 
+    [Star].[ObjectUri] AS [ObjectUri], 
+    [Star].[Id] AS [Id], 
+    [Star].[AbsoluteMagnitude] AS [AbsoluteMagnitude], 
+    [Star].[diameterAvrege] AS [diameterAvrege], 
+    [Star].[IsPotentiallyHazardousAsteroid] AS [IsPotentiallyHazardousAsteroid], 
+    [Star].[Velocity] AS [Velocity], 
+    [Star].[missDistance] AS [missDistance], 
+    [Star].[OrbitingBody] AS [OrbitingBody], 
+    [Star].[IsSentryObject] AS [IsSentryObject]
+    FROM [dbo].[Star] AS [Star]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AstronomyDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsIntrestedInEmails" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="AstronomyDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="PictureOfTheDays" EntityType="AstronomyDBModel.PictureOfTheDay" />
+          <EntitySet Name="Stars" EntityType="AstronomyDBModel.Star" />
+        </EntityContainer>
+        <EntityType Name="PictureOfTheDay">
+          <Key>
+            <PropertyRef Name="Url" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Classification" />
+          </Key>
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Classification" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Star">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="ObjectUri" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ObjectUri" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AbsoluteMagnitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="diameterAvrege" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsPotentiallyHazardousAsteroid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Velocity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="missDistance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrbitingBody" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsSentryObject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AstronomyDBModelStoreContainer" CdmEntityContainer="AstronomyDBEntities">
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="AstronomyDBModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="IsIntrestedInEmails" ColumnName="IsIntrestedInEmails" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PictureOfTheDays">
+            <EntityTypeMapping TypeName="AstronomyDBModel.PictureOfTheDay">
+              <MappingFragment StoreEntitySet="PictureOfTheDay">
+                <ScalarProperty Name="Classification" ColumnName="Classification" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stars">
+            <EntityTypeMapping TypeName="AstronomyDBModel.Star">
+              <MappingFragment StoreEntitySet="Star">
+                <ScalarProperty Name="IsSentryObject" ColumnName="IsSentryObject" />
+                <ScalarProperty Name="OrbitingBody" ColumnName="OrbitingBody" />
+                <ScalarProperty Name="missDistance" ColumnName="missDistance" />
+                <ScalarProperty Name="Velocity" ColumnName="Velocity" />
+                <ScalarProperty Name="IsPotentiallyHazardousAsteroid" ColumnName="IsPotentiallyHazardousAsteroid" />
+                <ScalarProperty Name="diameterAvrege" ColumnName="diameterAvrege" />
+                <ScalarProperty Name="AbsoluteMagnitude" ColumnName="AbsoluteMagnitude" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ObjectUri" ColumnName="ObjectUri" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
