@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Asteroid.cs" />
+    <Compile Include="Image_Modal.cs" />
     <Compile Include="JsonClass\CloseApproachData.cs" />
     <Compile Include="JsonClass\Collection.cs" />
     <Compile Include="JsonClass\Datum.cs" />
