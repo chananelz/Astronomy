@@ -20,6 +20,7 @@ using FireSharp.Interfaces;
 using FireSharp.Config;
 using FireSharp;
 using Newtonsoft.Json;
+using Microsoft.Maps.MapControl.WPF;
 
 namespace AstronomyWPF
 {
@@ -37,6 +38,7 @@ namespace AstronomyWPF
         public Window2()
         {
             InitializeComponent();
+
         }
         public bool ThumbnailCallback()
         {
@@ -57,6 +59,27 @@ namespace AstronomyWPF
 
                 return bitmapimage;
             }
+        }
+
+        private void MapWithPushpins_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // Disables the default mouse double-click action.
+            e.Handled = true;
+
+            //Get the mouse click coordinates
+            var mousePosition = e.GetPosition(MyMap);
+
+            //Convert the mouse coordinates to a locatoin on the map
+            Location pinLocation = MyMap.ViewportPointToLocation(mousePosition);
+
+            // The pushpin to add to the map.
+            Pushpin pin = new Pushpin();
+            pin.Location = pinLocation;
+
+            // Adds the pushpin to the map.
+            MyMap.Children.Clear();
+            MyMap.Children.Add(pin);
+            
         }
 
         private  void Button_Click(object sender, RoutedEventArgs e)
@@ -92,8 +115,10 @@ namespace AstronomyWPF
         {
             var data = new Image_Modal
                 {
-                    Img = "input"
-                };
+                    Img = "input",
+                    Longitude = "111",
+                    Latitude = "0000"
+            };
 
             client = new FirebaseClient(fc);
             var seret = client.Set("Image/" + "dfs" , data);

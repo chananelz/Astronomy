@@ -9,5 +9,7 @@ namespace AstronomyDP
     public class Image_Modal
     {
         public string Img { get; set; }
+        public string Longitude { get; set; }
+        public string Latitude { get; set; }
     }
 }
