@@ -87,6 +87,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsteroidFinder.cs" />
+    <Compile Include="firebase\SendMessage.cs" />
+    <Compile Include="firebase\UploadImage.cs" />
     <Compile Include="InformationAboutPlanetFinder.cs" />
     <Compile Include="PictureOfTheDayFinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

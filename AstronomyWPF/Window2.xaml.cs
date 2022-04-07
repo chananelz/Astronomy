@@ -21,6 +21,9 @@ using FireSharp.Config;
 using FireSharp;
 using Newtonsoft.Json;
 using Microsoft.Maps.MapControl.WPF;
+using Firebase;
+using Firebase.Storage;
+using Firebase.Auth;
 
 namespace AstronomyWPF
 {
@@ -29,7 +32,8 @@ namespace AstronomyWPF
     /// </summary>
     public partial class Window2 : Window
     {
-        IFirebaseConfig fc = new FirebaseConfig
+        string mystring = "qweqweqweq";
+        IFirebaseConfig fc = new FireSharp.Config.FirebaseConfig
         {
             AuthSecret = "gPqWPJP1H6zF7bZo1jQf5ax91slhGLmdPSY8fuvt",
             BasePath = "https://fir-astronomy-default-rtdb.firebaseio.com/"
@@ -99,8 +103,8 @@ namespace AstronomyWPF
                 Bitmap myBitmap = new Bitmap(ofd.FileName);
                 pictureBox.Source = BitmapToImageSource((Bitmap)myBitmap.GetThumbnailImage(240, 161, null, new IntPtr()));
 
-                //byte[] imgData = System.IO.File.ReadAllBytes(ofd.FileName);
-                //string output = Convert.ToBase64String(imgData);
+                byte[] imgData = System.IO.File.ReadAllBytes(ofd.FileName);
+                mystring = Convert.ToBase64String(imgData);
                 //var data = new Image_Modal
                 //{
                 //    Img = output
@@ -115,13 +119,45 @@ namespace AstronomyWPF
         {
             var data = new Image_Modal
                 {
-                    Img = "input",
+                    Img = mystring,
                     Longitude = "111",
                     Latitude = "0000"
             };
 
             client = new FirebaseClient(fc);
-            var seret = client.Set("Image/" + "dfs" , data);
+            var seret = client.Set("Image/" + "Image3", data);
+            
+        }
+
+        private async void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            // Get any Stream - it can be FileStream, MemoryStream or any other type of Stream
+            var stream = File.Open(@"C:\Users\user1\Desktop\1\22.jpg", FileMode.Open);
+
+            //authentication
+            var auth = new FirebaseAuthProvider(new Firebase.Auth.FirebaseConfig("AIzaSyCYU2lIa1AepwS8PW2vBT3qaxP5bykXlOU"));
+            var a = await auth.SignInWithEmailAndPasswordAsync("firebasestorage44@gmail.com", "9ijn8uhb7ygv");
+
+
+            // Constructr FirebaseStorage, path to where you want to upload the file and Put it there
+            var task = new FirebaseStorage(
+                "fir-astronomy.appspot.com",
+            
+                 new FirebaseStorageOptions
+                 {
+                     AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
+                     ThrowOnCancel = true,
+                 })
+                .Child("data")
+                .Child("random")
+                .Child("22.jpg")
+                .PutAsync(stream);
+
+            // Track progress of the upload
+            task.Progress.ProgressChanged += (s, ee) => Console.WriteLine($"Progress: {ee.Percentage} %");
+
+            // await the task to wait until upload completes and get the download url
+            var downloadUrl = await task;
 
         }
     }
