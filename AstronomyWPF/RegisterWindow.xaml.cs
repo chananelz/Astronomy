@@ -15,35 +15,43 @@ using System.Windows.Shapes;
 namespace AstronomyWPF
 {
     /// <summary>
-    /// Interaction logic for Window0.xaml
+    /// Interaction logic for RegisterWindow.xaml
     /// </summary>
-    public partial class Window0 : Window
+    public partial class RegisterWindow : Window
     {
-        public Window0()
+        public RegisterWindow()
         {
             InitializeComponent();
         }
 
-        private void getlogin(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (!(bool)myTermCheckBox.IsChecked)
+            {
+                return;
+            }
+            string name = myName.Text;
+            string password = myPasword.Password;
+            string email = myEmaile.Text;
+            bool wantMail = (bool)myEmailCheckBox.IsChecked   ;
+
+
+
             var BL = new AstronomyBL.UserValidation();
-            bool result = BL.ValidateUser(userName.Text, myPassword.Password);
+            bool result = BL.Sign_up_request(name, password, email, wantMail);
+
             if (result)
             {
-                Window1 wen1 = new Window1();
-                wen1.Show();
-                this.Close();
+                MessageBox.Show("Added successfully", "information", MessageBoxButton.OK, MessageBoxImage.Asterisk);
             }
+
             else
             {
                 MessageBox.Show("work cancelled", "Operation Failure", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
 
-        private void get_sing_up(object sender, RoutedEventArgs e)
-        {
-            RegisterWindow registerWindow = new RegisterWindow();
-            registerWindow.Show();
+            Window0 window0 = new Window0();
+            window0.Show();
             this.Close();
 
         }

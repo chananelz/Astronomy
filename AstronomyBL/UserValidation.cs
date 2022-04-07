@@ -35,7 +35,7 @@ namespace AstronomyBL
             {
                 return false;
             }
-            else if (Password.Length < 6)
+            else if (Password.Length < 2)
             {
                 return false;
             }

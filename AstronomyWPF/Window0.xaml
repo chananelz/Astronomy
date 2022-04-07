@@ -3,9 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AstronomyWPF"
         mc:Ignorable="d"
-        xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Window0" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
     <Grid>
@@ -23,20 +21,14 @@
         <StackPanel Margin="20,50,450,0">
             <Label Content="Welcome! Please login:" FontFamily="Harlow Solid Italic" FontSize="24" Margin="5,5" VerticalAlignment="Top" HorizontalAlignment="Left"/>
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"  Foreground="{DynamicResource ValidationErrorBrush}"  > <Run Text="The system is for space scientists only"/></TextBlock>
-            <StackPanel Orientation="Horizontal" >
-                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"  > <Run Text="Don't have an account?  "/></TextBlock>
-                
-                <Button VerticalAlignment="Top"  BorderBrush="White" Foreground="#FF2468AC" Background="White" BorderThickness="0" Click="get_sing_up" Height="23"  Margin="0,3,0,0" >
-                    <Run Text="sign up" FontSize="10" />
-                </Button>
-            </StackPanel>
+         
             <StackPanel Margin="0,15" Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
-                <TextBox materialDesign:HintAssist.Hint="Username" Width="200" Margin="5"/>
+                <TextBox materialDesign:HintAssist.Hint="Username" Width="200" Margin="5" Name="userName"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Foreground="#707070"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Password" Width="200" Margin="5"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Password" Width="200" Margin="5" Name="myPassword"/>
             </StackPanel>
             <Grid>
                 <CheckBox Content="Remember me" Margin="5,10" Foreground="#707070"/>
@@ -53,6 +45,14 @@
                 </Button>
                 <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#FFE05959" BorderBrush="#FFE05959">
                     <materialDesign:PackIcon Kind="Google" VerticalAlignment="Center" Foreground="White"/>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"  > <Run Text="Don't have an account?  "/></TextBlock>
+
+                <Button VerticalAlignment="Top" Foreground="#FF2468AC" Background="White" BorderThickness="0" Click="get_sing_up" Height="23"  Margin="0,3,0,0"  >
+                    <Run Text="sign up" FontSize="10" />
                 </Button>
             </StackPanel>
 
