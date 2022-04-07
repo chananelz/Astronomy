@@ -1,25 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Drawing;
-using System.IO;
-using AstronomyDP;
-using FireSharp.Response;
-using FireSharp.Interfaces;
-using FireSharp.Config;
-using FireSharp;
-using Newtonsoft.Json;
-using Firebase;
 using Firebase.Storage;
 using Firebase.Auth;
 
@@ -27,7 +7,8 @@ namespace AstronomyBL.firebase
 {
     public class UploadImage
     {
-        public async void SendImageToServer(System.IO.FileStream stream)
+        static int count = 0;
+        public async void SendImageToServer(System.IO.FileStream stream ,string longitude = "" ,string latitude = "")
         {
             // Get any Stream - it can be FileStream, MemoryStream or any other type of Stream
             
@@ -46,9 +27,8 @@ namespace AstronomyBL.firebase
                      AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
                      ThrowOnCancel = true,
                  })
-                .Child("Image")
-                .Child("random")
-                .Child("22.jpg")
+                .Child("Images")
+                .Child("image " + (count++).ToString())
                 .PutAsync(stream);
 
             // Track progress of the upload
@@ -56,7 +36,7 @@ namespace AstronomyBL.firebase
 
             // await the task to wait until upload completes and get the download url
             var downloadUrl = await task;
-            new SendMessage().sendEncryptedMessage(new TaggingImage().getTagFromUrl(downloadUrl));
+            new SendMessage().sendEncryptedMessage("I find: " + new TaggingImage().getTagFromUrl(downloadUrl) + " in location longitude:" + longitude + "latitude"+ latitude);
 
         }
     }

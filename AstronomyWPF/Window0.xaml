@@ -25,7 +25,10 @@
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"  Foreground="{DynamicResource ValidationErrorBrush}"  > <Run Text="The system is for space scientists only"/></TextBlock>
             <StackPanel Orientation="Horizontal" >
                 <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"  > <Run Text="Don't have an account?  "/></TextBlock>
-                <Button VerticalAlignment="Top"  Foreground="#FF2468AC" Click="get_sing_up" Height="18" Content="Create an account" ></Button>
+                
+                <Button VerticalAlignment="Top"  BorderBrush="White" Foreground="#FF2468AC" Background="White" BorderThickness="0" Click="get_sing_up" Height="23"  Margin="0,3,0,0" >
+                    <Run Text="sign up" FontSize="10" />
+                </Button>
             </StackPanel>
             <StackPanel Margin="0,15" Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>

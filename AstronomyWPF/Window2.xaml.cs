@@ -1,29 +1,12 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Drawing;
 using System.IO;
-using AstronomyDP;
-using FireSharp.Response;
 using FireSharp.Interfaces;
-using FireSharp.Config;
-using FireSharp;
-using Newtonsoft.Json;
 using Microsoft.Maps.MapControl.WPF;
-using Firebase;
-using Firebase.Storage;
-using Firebase.Auth;
 
 namespace AstronomyWPF
 {
@@ -38,14 +21,9 @@ namespace AstronomyWPF
             AuthSecret = "gPqWPJP1H6zF7bZo1jQf5ax91slhGLmdPSY8fuvt",
             BasePath = "https://fir-astronomy-default-rtdb.firebaseio.com/"
         };
-        IFirebaseClient client;
         public Window2()
         {
             InitializeComponent();
-
-
-
-
         }
         public bool ThumbnailCallback()
         {
@@ -82,6 +60,8 @@ namespace AstronomyWPF
             // The pushpin to add to the map.
             Pushpin pin = new Pushpin();
             pin.Location = pinLocation;
+            longitude.Text = pinLocation.Longitude.ToString().Substring(0, 7);
+            latitude.Text = pinLocation.Latitude.ToString().Substring(0, 7);
 
             // Adds the pushpin to the map.
             MyMap.Children.Clear();
@@ -89,7 +69,7 @@ namespace AstronomyWPF
             
         }
 
-        private  void Button_Click(object sender, RoutedEventArgs e)
+        private  void Button_uplode_image(object sender, RoutedEventArgs e)
         {
 
 
@@ -99,7 +79,7 @@ namespace AstronomyWPF
 
             if (ofd.ShowDialog() == true)
             {
-                System.Drawing.Image.GetThumbnailImageAbort myCallback = new System.Drawing.Image.GetThumbnailImageAbort(ThumbnailCallback);
+                Image.GetThumbnailImageAbort myCallback = new System.Drawing.Image.GetThumbnailImageAbort(ThumbnailCallback);
                 Bitmap myBitmap = new Bitmap(ofd.FileName);
                 pictureBox.Source = BitmapToImageSource((Bitmap)myBitmap.GetThumbnailImage(240, 161, null, new IntPtr()));
                 myBitmap.Dispose();
@@ -107,48 +87,35 @@ namespace AstronomyWPF
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_message(object sender, RoutedEventArgs e)
         {
-            var BL = new AstronomyBL.firebase.SendMessage();
-            bool result = BL.sendEncryptedMessage("hello");
+            if (hidden_messgebox.Visibility == Visibility.Hidden)
+            {
+                hidden_messgebox.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                var BL = new AstronomyBL.firebase.SendMessage();
+                bool result = BL.sendEncryptedMessage(hidden_messgebox.Text);
+                hidden_messgebox.Text = "";
+                hidden_messgebox.Visibility = Visibility.Hidden;
+            }
+        
         }
 
-        private async void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Button_restart(object sender, RoutedEventArgs e)
+        {
+            Window2 win2 = new Window2();
+            win2.Show();
+            this.Close();
+
+        }
+
+        private void Button_send_to_server(object sender, RoutedEventArgs e)
         {
             var BL = new AstronomyBL.firebase.UploadImage();
-            BL.SendImageToServer(stream);
+            BL.SendImageToServer(stream, longitude.Text, latitude.Text);
         }
     }
 }
 
-
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using Newtonsoft.Json;
-//using RestSharp;
-
-//namespace ImaggaAPIlev
-//{
-//    public class Nasa
-//    {
-//        public void getApod()
-//        {
-//            string apiKey = "mDhUZ35bcvoItcZj4s0qOHhaenI73sT2rANWSysZ";
-
-//            var client = new RestClient("https://api.nasa.gov/planetary/apod");
-//            client.Timeout = -1;
-
-//            var request = new RestRequest(Method.GET);
-//            request.AddParameter("api_key", apiKey);
-
-//            IRestResponse response = client.Execute(request);
-//            Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(response.Content);
-//            Console.WriteLine(myDeserializedClass.url);
-//            Console.ReadLine();
-//        }
-//    }
-
-//}
