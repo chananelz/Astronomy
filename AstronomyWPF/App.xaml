@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:AstronomyWPF"
              xmlns:viewModel="clr-namespace:AstronomyWPF.MVVM.ViewModels"
              xmlns:view="clr-namespace:AstronomyWPF.MVVM.View"
-             StartupUri="Window2.xaml">
+             StartupUri="Window1.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

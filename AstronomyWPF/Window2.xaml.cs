@@ -32,7 +32,7 @@ namespace AstronomyWPF
     /// </summary>
     public partial class Window2 : Window
     {
-        string mystring = "qweqweqweq";
+        FileStream stream;
         IFirebaseConfig fc = new FireSharp.Config.FirebaseConfig
         {
             AuthSecret = "gPqWPJP1H6zF7bZo1jQf5ax91slhGLmdPSY8fuvt",
@@ -42,6 +42,9 @@ namespace AstronomyWPF
         public Window2()
         {
             InitializeComponent();
+
+
+
 
         }
         public bool ThumbnailCallback()
@@ -96,69 +99,24 @@ namespace AstronomyWPF
 
             if (ofd.ShowDialog() == true)
             {
-                
-                //System.Windows.Media.ImageSource img = new BitmapSource(ofd.FileName);
-                //pictureBox.Source = img.GetThumbnailImage(240, 161, null, new IntPtr());
                 System.Drawing.Image.GetThumbnailImageAbort myCallback = new System.Drawing.Image.GetThumbnailImageAbort(ThumbnailCallback);
                 Bitmap myBitmap = new Bitmap(ofd.FileName);
                 pictureBox.Source = BitmapToImageSource((Bitmap)myBitmap.GetThumbnailImage(240, 161, null, new IntPtr()));
-
-                byte[] imgData = System.IO.File.ReadAllBytes(ofd.FileName);
-                mystring = Convert.ToBase64String(imgData);
-                //var data = new Image_Modal
-                //{
-                //    Img = output
-                //};
-                //SetResponse response =  client.Set("Image/" + "dsfs", data);
-                //Image_Modal result = response.ResultAs<Image_Modal>();
-
+                myBitmap.Dispose();
+                stream = File.Open(ofd.FileName, FileMode.Open);
             }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var data = new Image_Modal
-                {
-                    Img = mystring,
-                    Longitude = "111",
-                    Latitude = "0000"
-            };
-
-            client = new FirebaseClient(fc);
-            var seret = client.Set("Image/" + "Image3", data);
-            
+            var BL = new AstronomyBL.firebase.SendMessage();
+            bool result = BL.sendEncryptedMessage("hello");
         }
 
         private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            // Get any Stream - it can be FileStream, MemoryStream or any other type of Stream
-            var stream = File.Open(@"C:\Users\user1\Desktop\1\22.jpg", FileMode.Open);
-
-            //authentication
-            var auth = new FirebaseAuthProvider(new Firebase.Auth.FirebaseConfig("AIzaSyCYU2lIa1AepwS8PW2vBT3qaxP5bykXlOU"));
-            var a = await auth.SignInWithEmailAndPasswordAsync("firebasestorage44@gmail.com", "9ijn8uhb7ygv");
-
-
-            // Constructr FirebaseStorage, path to where you want to upload the file and Put it there
-            var task = new FirebaseStorage(
-                "fir-astronomy.appspot.com",
-            
-                 new FirebaseStorageOptions
-                 {
-                     AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
-                     ThrowOnCancel = true,
-                 })
-                .Child("data")
-                .Child("random")
-                .Child("22.jpg")
-                .PutAsync(stream);
-
-            // Track progress of the upload
-            task.Progress.ProgressChanged += (s, ee) => Console.WriteLine($"Progress: {ee.Percentage} %");
-
-            // await the task to wait until upload completes and get the download url
-            var downloadUrl = await task;
-
+            var BL = new AstronomyBL.firebase.UploadImage();
+            BL.SendImageToServer(stream);
         }
     }
 }
