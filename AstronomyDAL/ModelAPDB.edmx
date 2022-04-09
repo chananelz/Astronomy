@@ -5,6 +5,43 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="APDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Asteroid">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="AbsoluteMagnitude" Type="nvarchar(max)" />
+          <Property Name="diameterMin" Type="nvarchar(max)" />
+          <Property Name="diameterMax" Type="nvarchar(max)" />
+          <Property Name="EpochDate" Type="nvarchar(max)" />
+          <Property Name="Velocity" Type="nvarchar(max)" />
+          <Property Name="missDistance" Type="nvarchar(max)" />
+          <Property Name="OrbitingBody" Type="nvarchar(max)" />
+          <Property Name="IsPotentiallyHazardousAsteroid" Type="nvarchar(max)" />
+          <Property Name="IsSentryObject" Type="nvarchar(max)" />
+          <Property Name="ObjectUri" Type="nvarchar(max)" />
+          <Property Name="ObjectImage" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AsteroidnNearEarth">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="EpochDate" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="AbsoluteMagnitude" Type="nvarchar(max)" />
+          <Property Name="diameterMin" Type="nvarchar(max)" />
+          <Property Name="diameterMax" Type="nvarchar(max)" />
+          <Property Name="EpochDate" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Velocity" Type="nvarchar(max)" />
+          <Property Name="missDistance" Type="nvarchar(max)" />
+          <Property Name="OrbitingBody" Type="nvarchar(max)" />
+          <Property Name="IsPotentiallyHazardousAsteroid" Type="nvarchar(max)" />
+          <Property Name="IsSentryObject" Type="nvarchar(max)" />
+          <Property Name="ObjectUri" Type="nvarchar(max)" />
+          <Property Name="ObjectImage" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="PictureOfTheDay">
           <Key>
             <PropertyRef Name="Url" />
@@ -38,6 +75,8 @@
           <Property Name="IsIntrestedInEmails" Type="bit" />
         </EntityType>
         <EntityContainer Name="APDBModelStoreContainer">
+          <EntitySet Name="Asteroid" EntityType="Self.Asteroid" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AsteroidnNearEarth" EntityType="Self.AsteroidnNearEarth" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PictureOfTheDay" EntityType="Self.PictureOfTheDay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Star" EntityType="Self.Star" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
@@ -59,6 +98,8 @@
           <EntitySet Name="Users" EntityType="Self.Users" />
           <EntitySet Name="Star" EntityType="APDBModel.Star" />
           <EntitySet Name="PictureOfTheDay" EntityType="APDBModel.PictureOfTheDay" />
+          <EntitySet Name="Asteroid" EntityType="APDBModel.Asteroid" />
+          <EntitySet Name="AsteroidnNearEarth" EntityType="APDBModel.AsteroidnNearEarth" />
         </EntityContainer>
         <EntityType Name="Star">
           <Key>
@@ -82,6 +123,43 @@
           <Property Name="Url" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="Date" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Classification" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Asteroid">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AbsoluteMagnitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="diameterMin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="diameterMax" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EpochDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Velocity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="missDistance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrbitingBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsPotentiallyHazardousAsteroid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsSentryObject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ObjectUri" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ObjectImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AsteroidnNearEarth">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="EpochDate" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AbsoluteMagnitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="diameterMin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="diameterMax" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EpochDate" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Velocity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="missDistance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrbitingBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsPotentiallyHazardousAsteroid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsSentryObject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ObjectUri" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ObjectImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -121,6 +199,44 @@
                 <ScalarProperty Name="Classification" ColumnName="Classification" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Url" ColumnName="Url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Asteroid">
+            <EntityTypeMapping TypeName="APDBModel.Asteroid">
+              <MappingFragment StoreEntitySet="Asteroid">
+                <ScalarProperty Name="ObjectImage" ColumnName="ObjectImage" />
+                <ScalarProperty Name="ObjectUri" ColumnName="ObjectUri" />
+                <ScalarProperty Name="IsSentryObject" ColumnName="IsSentryObject" />
+                <ScalarProperty Name="IsPotentiallyHazardousAsteroid" ColumnName="IsPotentiallyHazardousAsteroid" />
+                <ScalarProperty Name="OrbitingBody" ColumnName="OrbitingBody" />
+                <ScalarProperty Name="missDistance" ColumnName="missDistance" />
+                <ScalarProperty Name="Velocity" ColumnName="Velocity" />
+                <ScalarProperty Name="EpochDate" ColumnName="EpochDate" />
+                <ScalarProperty Name="diameterMax" ColumnName="diameterMax" />
+                <ScalarProperty Name="diameterMin" ColumnName="diameterMin" />
+                <ScalarProperty Name="AbsoluteMagnitude" ColumnName="AbsoluteMagnitude" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AsteroidnNearEarth">
+            <EntityTypeMapping TypeName="APDBModel.AsteroidnNearEarth">
+              <MappingFragment StoreEntitySet="AsteroidnNearEarth">
+                <ScalarProperty Name="ObjectImage" ColumnName="ObjectImage" />
+                <ScalarProperty Name="ObjectUri" ColumnName="ObjectUri" />
+                <ScalarProperty Name="IsSentryObject" ColumnName="IsSentryObject" />
+                <ScalarProperty Name="IsPotentiallyHazardousAsteroid" ColumnName="IsPotentiallyHazardousAsteroid" />
+                <ScalarProperty Name="OrbitingBody" ColumnName="OrbitingBody" />
+                <ScalarProperty Name="missDistance" ColumnName="missDistance" />
+                <ScalarProperty Name="Velocity" ColumnName="Velocity" />
+                <ScalarProperty Name="EpochDate" ColumnName="EpochDate" />
+                <ScalarProperty Name="diameterMax" ColumnName="diameterMax" />
+                <ScalarProperty Name="diameterMin" ColumnName="diameterMin" />
+                <ScalarProperty Name="AbsoluteMagnitude" ColumnName="AbsoluteMagnitude" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

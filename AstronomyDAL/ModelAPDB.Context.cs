@@ -28,5 +28,7 @@ namespace AstronomyDAL
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<Star> Star { get; set; }
         public virtual DbSet<PictureOfTheDay> PictureOfTheDay { get; set; }
+        public virtual DbSet<Asteroid> Asteroid { get; set; }
+        public virtual DbSet<AsteroidnNearEarth> AsteroidnNearEarth { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace AstronomyWPF
 
             var BL = new AstronomyBL.AsteroidFinder();
 
-            var asteroids = BL.GetAsteroids();
+            var asteroids = BL.GetAsteroids_from_DB();
             if (asteroids.Count > 0)
                 ListViewProducts.ItemsSource = asteroids;
         }

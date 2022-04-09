@@ -65,6 +65,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asteroid.cs">
+      <DependentUpon>ModelAPDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AsteroidnNearEarth.cs">
+      <DependentUpon>ModelAPDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AsteroidReader.cs" />
     <Compile Include="Firebase_reader.cs" />
     <Compile Include="ModelAPDB.Context.cs">
       <AutoGen>True</AutoGen>

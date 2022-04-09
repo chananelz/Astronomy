@@ -29,7 +29,6 @@ namespace AstronomyDAL
                 context.Users.Add(user);
                 context.SaveChanges();
             }
-
         }
     }
 }

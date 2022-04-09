@@ -8,6 +8,8 @@
         <EntityTypeShape EntityType="APDBModel.Users" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="APDBModel.Star" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="APDBModel.PictureOfTheDay" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="APDBModel.Asteroid" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="APDBModel.AsteroidnNearEarth" Width="1.5" PointX="5.375" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

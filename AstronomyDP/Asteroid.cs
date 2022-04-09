@@ -21,5 +21,23 @@ namespace AstronomyDP
         public string IsSentryObject { get; set; }  // ממש מסוכן
         public string ObjectUri { get; set; }  // save uri to nasa like https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2363505&view=VOP
         public string ObjectImage { get; set; }  // ilostriation of the astroi
+
+        //public Asteroid(string Name, string ID, string AbsoluteMagnitude, string diameterMin, string diameterMax, string EpochDate, string Velocity, string missDistance, string OrbitingBody, string IsPotentiallyHazardousAsteroid, string IsSentryObject, string ObjectUri, string ObjectImage)
+        //{
+        //    this.Name = Name;   
+        //    this.ID = ID;   
+        //    this.AbsoluteMagnitude = AbsoluteMagnitude;
+        //    this.diameterMin = diameterMin;
+        //    this.diameterMax = diameterMax;
+        //    this.EpochDate = EpochDate;
+        //    this.Velocity = Velocity;
+        //    this.missDistance = missDistance;
+        //    this.OrbitingBody = OrbitingBody;
+        //    this.IsPotentiallyHazardousAsteroid = IsPotentiallyHazardousAsteroid;
+        //    this.IsSentryObject = IsSentryObject;
+        //    this.ObjectUri = ObjectUri;
+        //    this.ObjectImage = ObjectImage; 
+
+        //}
     }
 }

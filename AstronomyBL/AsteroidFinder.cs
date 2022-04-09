@@ -13,6 +13,10 @@ namespace AstronomyBL
 {
     public class AsteroidFinder
     {
+        public AsteroidFinder()
+        {
+            GetAsteroids();
+        }
         public List<Asteroid> GetAsteroids()
         {
             List <Asteroid> AllAsteroids = new List <Asteroid> ();
@@ -62,6 +66,8 @@ namespace AstronomyBL
                     IsSentryObject = item.IsSentryObject.ToString(),
                     missDistance = item.MissDistance, ObjectUri = "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=" + item.NeoReferenceId + "&view=VOP", OrbitingBody = item.orbiting_body, Velocity = item.Velocity });
             }
+
+            writeAsteroids_to_DB(AllAsteroids);
             return AllAsteroids;
         }
 
@@ -74,7 +80,7 @@ namespace AstronomyBL
                 risk = "False";
             }
 
-            List<Asteroid> allAsteroids = GetAsteroids();
+            List<Asteroid> allAsteroids = GetAsteroids_from_DB();
             
 
             var Result = (from asteroid in allAsteroids
@@ -86,7 +92,7 @@ namespace AstronomyBL
 
         public List<Asteroid> GetAsteroids_by_Diameter(float min_Diameter)
         {
-            List<Asteroid> allAsteroids = GetAsteroids();
+            List<Asteroid> allAsteroids = GetAsteroids_from_DB();
 
             var Result = (from asteroid in allAsteroids
                           where (float)Convert.ToDouble(asteroid.diameterMax.Split(' ')[2]) >= min_Diameter
@@ -97,7 +103,7 @@ namespace AstronomyBL
 
         public List<Asteroid> GetAsteroids_by_day(string Date)
         {
-            List<Asteroid> allAsteroids = GetAsteroids();
+            List<Asteroid> allAsteroids = GetAsteroids_from_DB();
 
             var Result = (from asteroid in allAsteroids
                           where asteroid.EpochDate == Date
@@ -107,6 +113,56 @@ namespace AstronomyBL
         }
 
 
+        public List<Asteroid> GetAsteroids_from_DB()
+        {
+            List<Asteroid> result = new List<Asteroid> ();
+            AstronomyDAL.AsteroidReader AsteroidCollection = new AstronomyDAL.AsteroidReader();
+
+            foreach (var myAsteroid in AsteroidCollection.AllAsteroidDetails)
+            {
+                result.Add(new Asteroid
+                {
+                    Name = myAsteroid.Name,
+                    ObjectImage = myAsteroid.ObjectImage,
+                    ID = myAsteroid.ID,
+                    AbsoluteMagnitude = myAsteroid.AbsoluteMagnitude,
+                    diameterMin = myAsteroid.diameterMin,
+                    diameterMax = myAsteroid.diameterMax,
+                    EpochDate = myAsteroid.EpochDate,
+                    IsPotentiallyHazardousAsteroid = myAsteroid.IsPotentiallyHazardousAsteroid,
+                    IsSentryObject = myAsteroid.IsSentryObject,
+                    missDistance = myAsteroid.missDistance,
+                    ObjectUri = myAsteroid.ObjectUri,
+                    OrbitingBody = myAsteroid.OrbitingBody,
+                    Velocity = myAsteroid.Velocity
+                });
+            }
+            return result;
+        }
+
+        public void writeAsteroids_to_DB(List<Asteroid> toDayAstroides)
+        {
+            AstronomyDAL.AsteroidReader AsteroidInsert = new AstronomyDAL.AsteroidReader();
+            foreach (var myAsteroid in toDayAstroides)
+            {
+                AsteroidInsert.AddNewAsteroid(new AstronomyDAL.AsteroidnNearEarth
+                {
+                    Name = myAsteroid.Name,
+                    ObjectImage = myAsteroid.ObjectImage,
+                    ID = myAsteroid.ID,
+                    AbsoluteMagnitude = myAsteroid.AbsoluteMagnitude,
+                    diameterMin = myAsteroid.diameterMin,
+                    diameterMax = myAsteroid.diameterMax,
+                    EpochDate = myAsteroid.EpochDate,
+                    IsPotentiallyHazardousAsteroid = myAsteroid.IsPotentiallyHazardousAsteroid,
+                    IsSentryObject = myAsteroid.IsSentryObject,
+                    missDistance = myAsteroid.missDistance,
+                    ObjectUri = myAsteroid.ObjectUri,
+                    OrbitingBody = myAsteroid.OrbitingBody,
+                    Velocity = myAsteroid.Velocity
+                });
+            }
+        }
 
     }
 }
