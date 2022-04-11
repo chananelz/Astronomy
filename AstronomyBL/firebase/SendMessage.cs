@@ -11,7 +11,7 @@ namespace AstronomyBL.firebase
 {
     public class SendMessage
     {
-        static int count = 0;
+        static int count = -1;
         IFirebaseConfig fc = new FireSharp.Config.FirebaseConfig
         {
             AuthSecret = "gPqWPJP1H6zF7bZo1jQf5ax91slhGLmdPSY8fuvt",
@@ -26,7 +26,10 @@ namespace AstronomyBL.firebase
             };
 
             client = new FirebaseClient(fc);
-            var seret = client.Set("Message/" + "Message"+ (count++).ToString(), data);
+            var seret = client.Set("Message/" + "Message "+ (++count).ToString(), data);
+
+            data.Message = AesOperation.EncryptString(data);
+            var encryseret = client.Set("Encryption /" + "Message " + (count).ToString(), data);
             return seret.StatusCode.ToString() == "OK";
         }
     }

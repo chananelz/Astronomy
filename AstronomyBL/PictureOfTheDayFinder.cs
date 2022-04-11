@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -31,7 +30,7 @@ namespace AstronomyBL
 
         }
 
-        public String Get_today_picture_of_the_day()  // TODO - conect this to what we get from the nasa api
+        public String Get_today_picture_of_the_day()  
         {
 
             string apiKey = "mDhUZ35bcvoItcZj4s0qOHhaenI73sT2rANWSysZ";
@@ -46,6 +45,14 @@ namespace AstronomyBL
             RootPictureOfTheDAY myDeserializedClass = JsonConvert.DeserializeObject<RootPictureOfTheDAY>(response.Content);
 
             var Result = myDeserializedClass.url;
+            DateTime time1 = DateTime.Now;
+
+            string todayDay = $"{time1:s}".Split('T')[0];
+            string myDay = todayDay.Split('-')[2];
+            string myMonth = todayDay.Split('-')[1];
+            string myYear = todayDay.Split('-')[0];
+
+            PictureOfTheDayCollection.AddNewPictureOfTheDay(Result, myDay + '/' + myMonth + '/' + myYear, "???");
             return Result;
 
         }

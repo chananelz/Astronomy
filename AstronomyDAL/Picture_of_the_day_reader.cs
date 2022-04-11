@@ -23,11 +23,21 @@ namespace AstronomyDAL
 
         }
 
-        public void AddNewPictureOfTheDay(PictureOfTheDay picture)
+        public void AddNewPictureOfTheDay(string Url, string Date, string Classification)
         {
+            if ((from MyPicture in Pictures
+                 where MyPicture.Url == Url
+                 select MyPicture).Any() == true)
+            {
+                return ;
+            }
             using (APDBEntities context = new APDBEntities())
             {
-                context.PictureOfTheDay.Add(picture);
+                context.PictureOfTheDay.Add(new PictureOfTheDay {
+                Url = Url,
+                Date = Date,
+                Classification = Classification
+                });
                 context.SaveChanges();
             }
         }

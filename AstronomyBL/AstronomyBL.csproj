@@ -241,6 +241,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AesOperation.cs" />
     <Compile Include="AsteroidFinder.cs" />
     <Compile Include="firebase\SendMessage.cs" />
     <Compile Include="firebase\TaggingImage.cs" />
