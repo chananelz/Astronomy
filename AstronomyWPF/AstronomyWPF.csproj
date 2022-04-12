@@ -249,6 +249,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MVVM\View\Circular ProgressBar_UC.xaml.cs">
+      <DependentUpon>Circular ProgressBar_UC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\timer.xaml.cs">
       <DependentUpon>timer.xaml</DependentUpon>
     </Compile>
@@ -318,6 +321,22 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
+    <Page Include="Assets\core1.1-1.5\Font.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\core1.1-1.5\Images.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\core1.1-1.5\Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVVM\View\Circular ProgressBar_UC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\timer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -423,6 +442,9 @@
     </EmbeddedResource>
     <Resource Include="Assets\font1.1-1.5\Raleway-VariableFont_wght.ttf" />
     <Resource Include="Assets\font1.1-1.5\Poppins-Regular.ttf" />
+    <Resource Include="Assets\font1.1-1.5\Roboto-Light.ttf" />
+    <Resource Include="Assets\font1.1-1.5\Roboto-Medium.ttf" />
+    <Resource Include="Assets\font1.1-1.5\Rubik-Light.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

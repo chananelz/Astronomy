@@ -29,18 +29,33 @@ namespace AstronomyWPF
 
         private void Calculate_the_Risk(object sender, RoutedEventArgs e)
         {
-            double my_absoluteMagnitude = Convert.ToDouble(AbsoluteMagnitude.Text);
-            double my_diameterMin = Convert.ToDouble(diameterMin.Text);
-            double my_diameterMax = Convert.ToDouble(diameterMax.Text);
-            double my_velocity = Convert.ToDouble(Velocity.Text);
-            double my_missDistance = Convert.ToDouble(missDistance.Text);
 
-            var BL = new AstronomyBL.Weighted_k_NN();
-            double result = BL.getPercentageOfRisk(my_absoluteMagnitude, my_diameterMin, my_diameterMax, my_velocity, my_missDistance);
+            try
+            {
+                double my_absoluteMagnitude = Convert.ToDouble(AbsoluteMagnitude.Text);
+                double my_diameterMin = Convert.ToDouble(diameterMin.Text);
+                double my_diameterMax = Convert.ToDouble(diameterMax.Text);
+                double my_velocity = Convert.ToDouble(Velocity.Text);
+                double my_missDistance = Convert.ToDouble(missDistance.Text);
 
-            Consumo my_consumo = new Consumo(result * 100);
-            DataContext = new ConsumoViewModel(my_consumo);
-            radial_chart.Visibility = Visibility.Visible;
+                var BL = new AstronomyBL.Weighted_k_NN();
+                double result = BL.getPercentageOfRisk(my_absoluteMagnitude, my_diameterMin, my_diameterMax, my_velocity, my_missDistance);
+                if (result == 0.0)
+                {
+                    result = 0.001;
+                }
+
+                Consumo my_consumo = new Consumo(result * 100);
+                DataContext = new ConsumoViewModel(my_consumo);
+                radial_chart.Visibility = Visibility.Visible;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to read your input, try again.", "input error", MessageBoxButton.OK, MessageBoxImage.Error);
+                InitializeComponent();
+                Consumo consumo = new Consumo(47);
+                DataContext = new ConsumoViewModel(consumo);
+            }
 
         }
     }

@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AstronomyWPF.MVVM.View"
              mc:Ignorable="d" 
+             Name="myTimer"
              d:DesignHeight="725" d:DesignWidth="475" Background="Transparent">
     <Grid>
         <Border Height="725"
@@ -15,6 +16,95 @@
                 CornerRadius="20"
                 BorderBrush="#FFFFFF"
                 BorderThickness="5" />
+        <Grid Height="150"
+              Width="150"
+              VerticalAlignment="Bottom"
+              HorizontalAlignment="Center"
+              Margin="0,0,0,15">
+
+            <ToggleButton x:Name="Start_Btn"
+                          Height="110"
+                          Width="110"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          Style="{StaticResource PlayBtn_Style}"
+                           Checked="Start_Btn_Checked"
+                          Unchecked="Start_Btn_Unchecked"/>
+
+        </Grid>
+
+        <Image Height="350"
+               Width="350"
+               Margin="0,30,0,0"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               Source="{StaticResource Dial_Image}"
+               Stretch="Uniform" />
+
+        <Grid Height="290"
+              Width="290"
+              VerticalAlignment="Top"
+              HorizontalAlignment="Center"
+              Margin="0,60,0,0">
+
+            <Ellipse Height="210"
+                     Width="210"
+                     Stroke="#4D4D4D"
+                     StrokeThickness="10"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center" />
+
+            <TextBlock x:Name="TimerLabel"
+                       Text="0"
+                       Foreground="#FFFF0000"
+                       Height="100"
+                       Width="100"
+                       FontFamily="{StaticResource Roboto_Light}"
+                       FontSize="50"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center"
+                       Margin="0,10,0,0">
+
+                <TextBlock.Effect>
+
+                    <DropShadowEffect BlurRadius="30"
+                                      ShadowDepth="2"
+                                      Direction="-90"
+                                      Color="#FEF200" />
+
+                </TextBlock.Effect>
+
+            </TextBlock>
+
+            <TextBlock Text="P E R C E N T"
+                       Foreground="#FFFFFF"
+                       Height="20"
+                       Width="210"
+                       FontFamily="{StaticResource Rubik_Light}"
+                       FontSize="15"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       Margin="0,60,0,0" />
+
+        </Grid>
+
+        <!--// Add Circular ProgressBar UserControl //-->
+
+        <local:Circular_ProgressBar_UC x:Name="cpb_uc"
+                                       Margin="191,205,0,0" 
+                                       Visibility="Visible"/>
+
+        <!--// Close Button //-->
+
+        <Button x:Name="CloseBtn"
+                Height="35"
+                Width="35"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0,20,20,0"
+                Style="{StaticResource PowerBtn_Style}"
+                Click="CloseBtn_Click"/>
 
     </Grid>
 </UserControl>
